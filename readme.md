@@ -1,0 +1,4 @@
+Elevator Pitch
+When planning a camping trip to a state park with kids and dogs, there are a lot of factors I like to consider when deciding on a park and campsite. Is the site  shaded? How much privacy does the layout provide? How easy is it to access the bathrooms? Are dogs allowed on all the trails at the park? What trails are kid-friendly?
+When looking at the State Park website, you are provided with one or two pictures of campsites, a driveway length/grade  and very little other  information. I find myself spending time searching social media groups or random blog posts for more information about different state parks and campsites within them.
+The goal of my project would be to provide a centralized place  where people can review the sites they have stayed at so that others can get helpful information and people’s opinions about specific campsites or campgrounds in the state park system. 
