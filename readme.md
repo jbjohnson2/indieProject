@@ -35,7 +35,7 @@ The goal of my project would be to provide a centralized place  where people can
 
 ### Design
 
-* [User Stories](DesignDocuments/userStories.md)
+* [User Stories](DesignDocuments/UserStories.md)
 * [Screen Design](DesignDocuments/Screens.md)
 
 
