@@ -12,6 +12,7 @@ Wk2
     finishing activities - 1 hr
     exercise 
 
-2/6 Indie Project checkpoint items - 1 hr
+2/6 Indie Project checkpoint items - 2 hr
     -update readme
     -user stories
+    -project plan
