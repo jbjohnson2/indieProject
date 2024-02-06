@@ -20,7 +20,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 
 
-### Week 4 - 2/5 to 2/11 - Class topic is Hibernate
+### Week 4 - 2/5 to 2/11 - Class topic is Hibernate and DAOs
 
 - [X] List technologies, versions and how they will be used
 - [X] Document user stories and select MVP stories
@@ -29,7 +29,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] Design screens - make sure all MVP user stories are covered
 - [ ] Update time log/reflection 
 - 
-### Week 5 - 2/12 to 2/18 - Class topic is 
+### Week 5 - 2/12 to 2/18 - Class topic is Hibernate
 
 - [ ] 
 - [ ] 
@@ -38,7 +38,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] 
 - [ ] 
 
-### Week 6 - 2/19 to 2/25 - Class topic is
+### Week 6 - 2/19 to 2/25 - Class topic is Deployment to AWS
 
 - [ ] 
 - [ ] 
@@ -63,7 +63,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] Create controller to manage the work of finding a trail
 - [ ] Update weekly reflection
 
-### Week 7 - 2/26 to 3/3 - Class topic is 
+### Week 7 - 2/26 to 3/3 - Class topic is Security Authentication
 #### Checkpoint 2 is Due on 2/7: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
 
 - [ ] Double-check all checkpoint 2 items (above) are complete and visible in github.
@@ -75,7 +75,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 
 
-### Week 8 - 3/4 to 3/10 - Class topic is
+### Week 8 - 3/4 to 3/10 - Class topic is Web Services
 
 - [ ] 
 - [ ] 
@@ -86,8 +86,8 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 ### Spring Break 3/11-3/17
 
-### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is
-#### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
+### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is RESTFul Web Services
+ #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
 - [ ] 
 - [ ] 
@@ -96,7 +96,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] 
 - [ ] 
 
-### Week 10 - 3/25 to 3/31 - Class topic is
+### Week 10 - 3/25 to 3/31 - Work Week
 
 - [ ] 
 - [ ] 
@@ -105,7 +105,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] 
 - [ ] 
 
-### Week 11 - 4/1 to 4/7 - Class topic is
+### Week 11 - 4/1 to 4/7 - Work Week
 
 - [ ] 
 - [ ] 
@@ -113,16 +113,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] 
 - [ ] 
 - [ ] 
-### Week 12 - 4/8 to 4/14 - Class topic is
-
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-
-### Week 13 - 4/15 to 4/21 - Class topic is
+### Week 12 - 4/8 to 4/14 - Team Presentations
 
 - [ ] 
 - [ ] 
@@ -131,7 +122,16 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] 
 - [ ] 
 
-### Week 14 - 4/22 to 4/27 - Class topic is
+### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
+
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+
+### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
 
 - [ ] 
 - [ ] 
