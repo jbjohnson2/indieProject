@@ -33,13 +33,13 @@ The goal of my project would be to provide a centralized place  where people can
 * IDE: IntelliJ IDEA
 
 
-### Design
-
-* [User Stories](DesignDocuments/UserStories.md)
-* [Screen Design](DesignDocuments/Screens.md)
 
 
-### [Project Plan](ProjectPlan.md)
+#### [User Stories](DesignDocuments/UserStories.md)
+#### [Screen Design](DesignDocuments/Screens.md)
+
+
+#### [Project Plan](ProjectPlan.md)
 
 #### [Weekly Refelection](WeeklyReflection.md)
 #### [TimeLog](TimeLog.md)
