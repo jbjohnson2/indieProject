@@ -18,17 +18,18 @@
 
 ### Add User
 
-![Add User](createUser.png)
+![Add User](wireframes/createUser.png)
 
 ### Login
 
-![Login](login.png)
+![Login](wireframes/login.png)
 
 ### Create Review
 
-![Create Review](createReview.png)
+![Create Review](wireframes/createReview.png)
 
 ### My Account
 
-![My Account](myAccount.png)
+![My Account](wireframes/myAccount.png)
+
 
