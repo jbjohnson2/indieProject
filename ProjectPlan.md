@@ -1,23 +1,16 @@
 # Project Plan
 
 ### Week 2
+
 - [X] Create project repository on GitHub
 - [X] Create project structure in intellij and push
 - [X] Add link to list of indie projects in student repo.
-- [X] Weekly reflection/time log
 - [X] Complete Problem Statement
+- [X] Weekly reflection/time log
 
 ### Week 3
 
-
-
-For those using this as a model, continue adding weekly tasks by considering:
-1. which user story will you work on in a given week
-2. detail the tasks needed to complete that user story
-3. what we are doing in class each week and what you might add to your project as a result, either in that week or the following week
-4. add in project checkpoints/milestones and tasks to achieve them
-5. I started a few of these below as examples
-
+-[ ] update weekly reflection
 
 
 ### Week 4 - 2/5 to 2/11 - Class topic is Hibernate and DAOs
@@ -25,8 +18,8 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 - [X] List technologies, versions and how they will be used
 - [X] Document user stories and select MVP stories
-- [ ] Confirm MVP stories meet Ent Java indie project objectives
-- [ ] Write project plan
+- [x] Confirm MVP stories meet Ent Java indie project objectives
+- [x] Write project plan
 - [ ] Design screens - make sure all MVP user stories are covered
 - [ ] Update time log/reflection 
 - 
@@ -43,7 +36,7 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 ### Week 6 - 2/19 to 2/25 - Class topic is Deployment to AWS
 
-- [ ] create a class to perform crud on review 
+- [ ] create a class to perform crud on review
 - [ ] create config file for database connection
 - [ ] create a database connection class
 - [ ] create a test database
@@ -80,7 +73,6 @@ For those using this as a model, continue adding weekly tasks by considering:
 
 ### Week 8 - 3/4 to 3/10 - Class topic is Web Services
 
-
 - [ ] Set up Authentication in indie project (more tasks coming for this)
 - [ ] Create project DB on AWS.
 - [ ] Update project config files for AWS as needed
@@ -93,35 +85,32 @@ For those using this as a model, continue adding weekly tasks by considering:
 ### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is RESTFul Web Services
  #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
-- [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.- [ ] 
+- [ ] create state park database 
+- [ ] add state parks and there zipcodes to database
+- [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.
 - [ ] Update Weekly reflection
 
 ### Week 10 - 3/25 to 3/31 - Work Week
 
-- [ ] Implement consuming a web service
+- [ ] Implement consuming a web service - zip code search
 - [ ] Update Weekly reflection
 
 ### Week 11 - 4/1 to 4/7 - Work Week
+
+- [ ] create a jsp for a page where users can view/edit/delete their reviews
+- [ ] create a controller to perform the view/edit/delete of those reviews
+- [ ] Update Weekly reflection
+
+### Week 12 - 4/8 to 4/14 - Team Presentations
 
 - [ ] Add additional unit tests for more code coverage
 - [ ] if MVP is working, add additional features
 - [ ] Update Weekly reflection
 
-### Week 12 - 4/8 to 4/14 - Team Presentations
-
-- [ ] clean up code 
-- [ ] work on documentation to ensure it meets requirements
-- [ ] Update Weekly reflection
-
-
 ### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] clean up code
+- [ ] work on documentation to ensure it meets requirements
 - [ ] Update Weekly reflection
 
 ### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
@@ -132,9 +121,9 @@ For those using this as a model, continue adding weekly tasks by considering:
 - [ ] Code quality check
 - [ ] Update Weekly reflection
 
-
 ### Week 15 - 4/29 to 5/5 - Work week
 - [ ] Implement Feedback from Week 14 review
+- [ ] Add video demonstration link to readme
 - [ ] Update journal entry
 - [ ] Final touches before code complete
 
