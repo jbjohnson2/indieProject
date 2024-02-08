@@ -1,18 +1,21 @@
-Time Log
-Wk2
-1/23
-    wk 1 videos -  1 hour
-    wk 2 readings/videos 1 hr
-1/24
-    wk2 videos 40 min
-    video/activity 2 hr
-1/25 
-    exercise - 1 hr
-1/27
-    finishing activities - 1 hr
-    exercise 
 
-2/6 Indie Project checkpoint items - 2 hr
-    -update readme
-    -user stories
-    -project plan
+# Time Log
+
+| Date    | Task                         | Hours | Notes|
+|---------|------------------------------|-------|------|
+| 1/23/24 | wk 1 videos                  | 1     | |
+| 1/23/24 | wk 2 readings/videos         | 1     | |
+| 1/24/24 | wk 3 videos                  | 0.75  | |
+| 1/24/24 | video/activity               | 2     | |
+| 1/25/24 | exercise                     | 1     | |
+| 1/27/24 | exercise                     | 1     | |
+| 1/28/24 | exercise                     | 1     | |
+| 1/29/24 | wk 3 sup/follow up videos    | 0.5   | |
+| 1/29/24 | wk 3 readings/videos         | 0.75  | |
+| 1/29/24 | wk 3  videos                 | 0.5   | |
+| 1/30/24 | wk 3  videos                 | 2     | |
+| 2/01/24 | exercise videos and work     | 1     | |
+| 2/04/24 | reading and prof dev sign up | 0.5   | |
+| 2/04/24 | wk 3 exercise                | 2.5   | |
+| 2/06/24 | proj check 1 video/work      | 2     | |
+| 2/07/24 | proj plan                    | 3     | |
