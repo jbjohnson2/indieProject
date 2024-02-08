@@ -10,7 +10,7 @@
 
 ### Week 3
 
--[ ] update weekly reflection
+- [x] update weekly reflection
 
 
 ### Week 4 - 2/5 to 2/11 - Class topic is Hibernate and DAOs
@@ -20,9 +20,9 @@
 - [X] Document user stories and select MVP stories
 - [x] Confirm MVP stories meet Ent Java indie project objectives
 - [x] Write project plan
-- [ ] Design screens - make sure all MVP user stories are covered
-- [ ] Update time log/reflection 
-- 
+- [x] Design screens - make sure all MVP user stories are covered
+- [x] Update time log/reflection 
+ 
 ### Week 5 - 2/12 to 2/18 - Class topic is Hibernate
 
 - [ ] Choose website template
@@ -43,21 +43,6 @@
 - [ ] create unit tests for review dao
 - [ ] Update Weekly reflection
 
-
-#### This week my focus is the Find Trails by Name user story
-- [ ] First cut at database design
-- [ ] Create the dev version of the database - at least the Trail table
-- [ ] Create Trail entity
-- [ ] Create a class to perform CRUD on trail - TrailDao
-- [ ] Create the config files for the DB connection info (dev and test)
-- [ ] Create a test version of the database for unit testing
-- [ ] Create unit tests for the TrailDao
-- [ ] Create a class for the DB connection business
-- [ ] Create JSP for finding trails
-- [ ] Create JSP for trail results
-- [ ] Create controller to route to find-a-trail jsp
-- [ ] Create controller to manage the work of finding a trail
-- [ ] Update weekly reflection
 
 ### Week 7 - 2/26 to 3/3 - Class topic is Security Authentication
 #### Checkpoint 2 is Due on 2/28: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
