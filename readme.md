@@ -32,7 +32,9 @@ The goal of my project would be to provide a centralized place  where people can
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA
 
-
+* Technologies I may want to implement
+    * Hibernate validator
+    * Hibernate search
 
 
 #### [User Stories](DesignDocuments/UserStories.md)
