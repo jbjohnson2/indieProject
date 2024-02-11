@@ -19,3 +19,14 @@
 | 2/04/24 | wk 3 exercise                | 2.5   | |
 | 2/06/24 | proj check 1 video/work      | 2     | |
 | 2/07/24 | proj plan                    | 3     | |
+| 2/08/24 | readings and videos          | 2.5   | |
+| 2/09/24 | videos/demos                 | 2.5   | |
+| 2/10/24 | videos/demos                 | 1     | |
+| 2/10/24 | exercise                     | 1.5   | |
+|         |                              |       | |
+|         |                              |       | |
+|         |                              |       | |
+|         |                              |       | |
+|         |                              |       | |
+|         |                              |       | |
+
