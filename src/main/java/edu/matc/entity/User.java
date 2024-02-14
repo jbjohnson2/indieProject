@@ -10,7 +10,7 @@ import java.util.Set;
  * a class to represent a  User.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")

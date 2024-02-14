@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
- * The type Review.
+ * The class to represent a  Review
  */
 @Entity
 @Table (name="reviews")
@@ -15,31 +15,31 @@ public class Review {
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
-    @Column
+    @Column(name = "park")
     private String park;
 
-    @Column
+    @Column(name = "campground")
     private String campground;
 
-    @Column
+    @Column(name = "campsite")
     private String campsite;
 
-    @Column
+    @Column(name = "shade")
     private String shade;
 
-    @Column
+    @Column(name = "size")
     private String size;
 
-    @Column
+    @Column(name = "bathroom_access")
     private String bathroomAccess;
 
-    @Column
+    @Column(name = "kid_friendliness")
     private String kidFriendliness;
 
-    @Column
+    @Column(name = "dog_friendliness")
     private String dogFriendliness;
 
-    @Column
+    @Column(name = "review_text")
     private String reviewText;
 
     @ManyToOne
