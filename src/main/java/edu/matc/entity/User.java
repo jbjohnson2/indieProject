@@ -3,8 +3,11 @@ package edu.matc.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
- * The type User.
+ * a class to represent a  User.
  */
 @Entity
 @Table(name = "user")
@@ -29,6 +32,8 @@ public class User {
     @Column(name = "zipcode")
     private int zipcode;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, FetchType.EAGER)
+    private Set<Review> reviews = new HashSet<>();
 
     /**
      * Instantiates a new User.
