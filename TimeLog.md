@@ -26,7 +26,7 @@
 | 02/11/24 | submit exercise/complete learing tracker   | 0.75  | |
 | 02/13/24 | readings/ videos                           | 2     | |
 | 02/14/24 | indie project -add database, entities, dao | 2     | |
-|          |                                            |       | |
+| 2/15/24  | demos/videos                               | 2     | |
 |          |                                            |       | |
 |          |                                            |       | |
 
