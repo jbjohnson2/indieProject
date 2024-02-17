@@ -32,7 +32,7 @@ public class User {
     @Column(name = "zipcode")
     private int zipcode;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, FetchType.EAGER)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Review> reviews = new HashSet<>();
 
     /**

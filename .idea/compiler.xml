@@ -9,5 +9,8 @@
         <module name="indieproject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dba" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
