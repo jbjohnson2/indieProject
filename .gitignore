@@ -35,6 +35,7 @@
 /target/
 /log/
 /lib/
+/resources/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,5 +49,3 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-resources/database.properties
-resources/hibernate.cfg.xml
