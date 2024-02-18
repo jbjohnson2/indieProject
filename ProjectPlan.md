@@ -29,9 +29,9 @@
 - [ ] Create home page jsp
 - [ ] Create review search jsp
 - [ ] create review search results jsp
-- [ ] create database - review and user 
-- [ ] create review entity
-- [ ] implement log4j
+- [x] create database - review and user 
+- [x] create review entity
+- [x] implement log4j
 - [ ] Update weekly reflection
 
 ### Week 6 - 2/19 to 2/25 - Class topic is Deployment to AWS

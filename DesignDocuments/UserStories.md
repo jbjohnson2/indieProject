@@ -29,6 +29,9 @@ within that park.
 As a camper, I want to be able to search for reviews by keyword so that I can find reviews that specifically mention 
 things that are important to me.
 
+### Sign out
+As a user, I want to be able to sign out of my account so that others cannot access my account
+
 ## User Stories to improve MVP
 
 

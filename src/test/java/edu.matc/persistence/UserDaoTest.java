@@ -1,12 +1,14 @@
 package edu.matc.persistence;
-import edu.matc.util.Database;
+
 import edu.matc.entity.Review;
-import org.hibernate.annotations.Bag;
+import edu.matc.entity.User;
+import edu.matc.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import edu.matc.entity.User;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,8 +54,8 @@ class UserDaoTest {
 
     @Test
     void deleteSuccess() {
-        userDao.delete(userDao.getById(2));
-        assertNull(userDao.getById(2));
+        userDao.delete(userDao.getById(3));
+        assertNull(userDao.getById(3));
     }
 
 

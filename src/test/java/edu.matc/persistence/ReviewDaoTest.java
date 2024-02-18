@@ -6,6 +6,8 @@ import edu.matc.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ReviewDaoTest {
@@ -42,29 +44,39 @@ class ReviewDaoTest {
         UserDao userDao = new UserDao();
         User user = userDao.getById(3);
 
-        Review reviewToInsert= new Review("Mirror Lake", "CliffWood", "89", "A", "B", "C", "D", "F", "cool", user);
+        Review reviewToInsert= new Review("Mirror Lake", "CliffWood", "89", "A",
+                    "B", "C", "D", "F", "cool", user);
         int insertedReviewId = reviewDao.insert(reviewToInsert);
         assertNotEquals(0, insertedReviewId);
         Review insertedReview = reviewDao.getById((insertedReviewId));
         assertEquals("Mirror Lake", insertedReview.getPark());
+        assertEquals("DJ", insertedReview.getUser().getFirstName());
 
-        //todo check this test against orderdao2/16
     }
 
 
     @Test
     void delete() {
+        reviewDao.delete(reviewDao.getById(4));
+        assertNull(reviewDao.getById(4));
     }
+
 
     @Test
     void getAll() {
+        List<Review> reviews = reviewDao.getAll();
+        assertEquals(4, reviews.size());
     }
 
     @Test
     void getByPropertyEqual() {
+        List<Review> reviews = reviewDao.getByPropertyEqual("shade", "A");
+        assertEquals(1, reviews.size());
     }
 
     @Test
     void getByPropertyLike() {
+        List<Review> reviews = reviewDao.getByPropertyLike("reviewText", "nice");
+        assertEquals(2, reviews.size());
     }
 }
