@@ -17,11 +17,11 @@ class UserDaoTest {
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleanDB.sql");
+        userDao = new UserDao();
     }
 
     @Test
     void getByIdSuccess() {
-        userDao = new UserDao();
         User retrievedUser = userDao.getById(1);
         assertNotNull(retrievedUser);
         assertEquals("Cat", retrievedUser.getFirstName());
@@ -31,7 +31,6 @@ class UserDaoTest {
 
     @Test
     void updateSuccess() {
-        userDao = new UserDao();
         User userToUpdate = userDao.getById(1);
         userToUpdate.setLastName("Smith");
         userDao.update(userToUpdate);
@@ -43,7 +42,6 @@ class UserDaoTest {
 
     @Test
     void insertSuccess() {
-        userDao = new UserDao();
         User userToInsert = new User("Gray", "Squirrel", "gSquirrel", "gsquirrell@email.com", 53718);
         int insertedUserId = userDao.insert(userToInsert);
         assertNotEquals(0, insertedUserId);
@@ -54,7 +52,6 @@ class UserDaoTest {
 
     @Test
     void deleteSuccess() {
-        userDao = new UserDao();
         userDao.delete(userDao.getById(2));
         assertNull(userDao.getById(2));
     }
@@ -62,8 +59,6 @@ class UserDaoTest {
 
    /** @Test
     void deleteWithOrdersSuccess() {
-        //create the userDao
-        userDao = new UserDao();
 
         //get the user we want to delete that has 2 orders associated
         User userToBeDeleted = userDao.getById(3);
@@ -88,14 +83,12 @@ class UserDaoTest {
 
     @Test
     void getAll() {
-        userDao = new UserDao();
         List<User> users = userDao.getAll();
         assertEquals(6, users.size());
     }
 
     @Test
     void getByPropertyEqual() {
-        userDao = new UserDao();
         List<User> users = userDao.getByPropertyEqual("firstName", "Cat");
         assertEquals(1, users.size());
         assertEquals(1, users.get(0).getId());
@@ -103,7 +96,6 @@ class UserDaoTest {
 
     @Test
     void getByPropertyLike() {
-        userDao = new UserDao();
         List<User> users = userDao.getByPropertyLike("lastName", "c");
         assertEquals(2, users.size());
     }
