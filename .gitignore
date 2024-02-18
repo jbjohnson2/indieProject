@@ -35,7 +35,7 @@
 /target/
 /log/
 /lib/
-/resources/
+
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -49,3 +49,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+/src/main/java/edu/matc/resources/
+/src/test/resources/
