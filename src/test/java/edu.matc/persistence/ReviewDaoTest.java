@@ -48,7 +48,7 @@ class ReviewDaoTest {
         Review insertedReview = reviewDao.getById((insertedReviewId));
         assertEquals("Mirror Lake", insertedReview.getPark());
 
-        //todo check this test against orderdao
+        //todo check this test against orderdao2/16
     }
 
 

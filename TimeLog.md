@@ -27,6 +27,16 @@
 | 02/13/24 | readings/ videos                           | 2     | |
 | 02/14/24 | indie project -add database, entities, dao | 2     | |
 | 2/15/24  | demos/videos                               | 2     | |
+| 2/16/24  | demos/videos                               | 1     | |
+| 02/17/24 | project work -database, reviewDao, tests   | 2     | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
+|          |                                            |       | |
 |          |                                            |       | |
 |          |                                            |       | |
 
