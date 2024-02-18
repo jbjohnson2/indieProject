@@ -36,11 +36,11 @@
 
 ### Week 6 - 2/19 to 2/25 - Class topic is Deployment to AWS
 
-- [ ] create a class to perform crud on review
-- [ ] create config file for database connection
-- [ ] create a database connection class
-- [ ] create a test database
-- [ ] create unit tests for review dao
+- [x] create a class to perform crud on review
+- [x] create config file for database connection
+- [x] create a database connection class
+- [x] create a test database
+- [x] create unit tests for review dao
 - [ ] Update Weekly reflection
 
 
