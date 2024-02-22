@@ -29,9 +29,9 @@
 | 2/15/24  | demos/videos                               | 2     | |
 | 2/16/24  | demos/videos                               | 1     | |
 | 02/17/24 | project work -database, reviewDao, tests   | 2     | |
-|          |                                            |       | |
-|          |                                            |       | |
-|          |                                            |       | |
+| 2/18/24  | project work                               | 1     | |
+| 2/20/24  | project work                               | 2     | |
+| 2/22/24  | project work                               | 1     | |
 |          |                                            |       | |
 |          |                                            |       | |
 |          |                                            |       | |
