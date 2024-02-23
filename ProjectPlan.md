@@ -41,6 +41,8 @@
 - [x] create a database connection class
 - [x] create a test database
 - [x] create unit tests for review dao
+- [ ] add log statements to make sure log4j is working properly
+- [ ] add generic dao
 - [ ] Update Weekly reflection
 
 
