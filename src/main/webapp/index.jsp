@@ -1,6 +1,6 @@
-
-<%@include file="head.jsp"%>
 <html>
+<%@include file="head.jsp"%>
+
 <body>
 
 <h2>Campsite Reviewer</h2>
