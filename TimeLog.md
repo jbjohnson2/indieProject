@@ -32,10 +32,10 @@
 | 2/18/24  | project work                               | 1     | |
 | 2/20/24  | project work                               | 2     | |
 | 2/22/24  | project work                               | 1     | |
-|          |                                            |       | |
-|          |                                            |       | |
-|          |                                            |       | |
-|          |                                            |       | |
+| 2/23/24  | meeting for peer review                    | 1     | |
+| 2/25/24  | computer set up/peer review form           | 2     | |
+| 2/26/24  | prof dev videos review                     | 1     | |
+| 2/27/24  |                                            |       | |
 |          |                                            |       | |
 |          |                                            |       | |
 |          |                                            |       | |
