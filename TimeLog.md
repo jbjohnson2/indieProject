@@ -23,7 +23,7 @@
 | 2/09/24  | videos/demos                               | 2.5   | |
 | 2/10/24  | videos/demos                               | 1     | |
 | 2/10/24  | exercise                                   | 1.5   | |
-| 02/11/24 | submit exercise/complete learing tracker   | 0.75  | |
+| 02/11/24 | submit exercise/complete learning tracker  | 0.75  | |
 | 02/13/24 | readings/ videos                           | 2     | |
 | 02/14/24 | indie project -add database, entities, dao | 2     | |
 | 2/15/24  | demos/videos                               | 2     | |
@@ -35,7 +35,7 @@
 | 2/23/24  | meeting for peer review                    | 1     | |
 | 2/25/24  | computer set up/peer review form           | 2     | |
 | 2/26/24  | prof dev videos review                     | 1     | |
-| 2/27/24  |                                            |       | |
+| 2/27/24  | prof dev videos review                     | 1     | |
 |          |                                            |       | |
 |          |                                            |       | |
 |          |                                            |       | |
