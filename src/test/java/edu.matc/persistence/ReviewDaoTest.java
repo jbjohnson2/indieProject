@@ -50,6 +50,7 @@ class ReviewDaoTest {
         assertNotEquals(0, insertedReviewId);
         Review insertedReview = reviewDao.getById((insertedReviewId));
         assertEquals("Mirror Lake", insertedReview.getPark());
+
         assertEquals("DJ", insertedReview.getUser().getFirstName());
 
     }

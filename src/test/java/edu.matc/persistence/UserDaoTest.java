@@ -59,29 +59,29 @@ class UserDaoTest {
     }
 
 
-   /** @Test
+    @Test
     void deleteWithOrdersSuccess() {
 
         //get the user we want to delete that has 2 orders associated
-        User userToBeDeleted = userDao.getById(3);
-        List<Review> orders = userToBeDeleted.getReviews();
+        User userToBeDeleted = userDao.getById(1);
+        List<Review> reviews = userToBeDeleted.getReviews();
 
         //get the associated order numbers
-        int orderNumber1 = orders.get(0).getId();
-        int orderNumber2 = orders.get(1).getId();
+        int reviewNumber1 = reviews.get(0).getId();
+        int reviewNumber2 = reviews.get(1).getId();
 
         //delete user
         userDao.delete(userToBeDeleted);
 
         //verify that the user was deleted
-        assertNull(userDao.getById(3));
+        assertNull(userDao.getById(1));
 
         //verify that the orders were also deleted
         ReviewDao reviewDao = new ReviewDao();
-        assertNull(reviewDao.getById(orderNumber1));
-        assertNull(reviewDao.getById(orderNumber2));
+        assertNull(reviewDao.getById(reviewNumber1));
+        assertNull(reviewDao.getById(reviewNumber2));
     }
-    **/
+
 
     @Test
     void getAll() {
