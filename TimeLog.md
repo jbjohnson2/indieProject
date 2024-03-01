@@ -39,4 +39,12 @@
 | 2/28/24 | trouble-shooting user display exercise and project to get working in new environment | 2     | |
 |         | removing files from git                                                              | .5    | |
 |         | AWS                                                                                  | 1     | |
+| 2/29/24 | wk 7 readings                                                                        | 1     | |
+| 3/01/24 | Cognito videos                                                                       |       | |
+|         |                                                                                      |       | |
+|         |                                                                                      |       | |
+|         |                                                                                      |       | |
+|         |                                                                                      |       | |
+|         |                                                                                      |       | |
+|         |                                                                                      |       | |
 

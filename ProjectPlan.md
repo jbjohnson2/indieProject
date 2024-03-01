@@ -37,15 +37,15 @@
 - [x] create a database connection class
 - [x] create a test database
 - [x] create unit tests for review dao
-- [x] add log statements to make sure log4j is working properly
-- [ ] add generic dao
+- [x] add log statements to make sure log4j is working properly- [ ] add generic dao
 - [x] Update Weekly reflection
 
 
 ### Week 7 - 2/26 to 3/3 - Class topic is Security Authentication
 #### Checkpoint 2 is Due on 2/28: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
 
-- [ ] Double-check all checkpoint 2 items (above) are complete and visible in github.
+- [x] Double-check all checkpoint 2 items (above) are complete and visible in github.
+- [ ] week 5 supplemental videos
 - [ ] add generic dao
 - [ ] Create create user jsp
 - [ ] create add user jsp
