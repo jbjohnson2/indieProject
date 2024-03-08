@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,7 +33,13 @@ public class Database implements PropertiesLoader {
     /** private constructor prevents instantiating this class anywhere else
      **/
     private Database() {
-        properties= loadProperties("/database.properties");
+        try {
+            properties = loadProperties("/database.properties");
+        } catch (IOException ioException){
+            logger.error("PL Error" + ioException);
+        } catch (Exception exception) {
+            logger.error("Exception" + exception);
+        }
 
     }
 
