@@ -45,9 +45,9 @@
 | 03/04/24 | Prof Dev video/feedback                                                              | .5    | |
 | 03/05/24 | Prof Dev Videos/feeback                                                              | 1     | |
 | 03/06/24 | wk 8 readings/videos                                                                 | 2     | |
-|          |                                                                                      |       | |
-|          |                                                                                      |       | |
-|          |                                                                                      |       | |
+| 03/08/24 | demo videos/activities                                                               | 1     | |
+| 03/10/24 | demo videos/activites/exercise                                                       | 2.5   | |
+|          | learning tracker                                                                     | .75   | |
 |          |                                                                                      |       | |
 |          |                                                                                      |       | |
 |          |                                                                                      |       | |
