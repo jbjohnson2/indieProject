@@ -5,7 +5,7 @@
 
 <h2>Campsite Reviewer</h2>
 
-<%@include file="nav.jsp"%>
+<%@include file="header.jsp"%>
 <form action="searchUser" class="form-inline">
     <div class="=form-group">
         <label for="searchTerm">Search</label>

@@ -45,39 +45,37 @@
 #### Checkpoint 2 is Due on 2/28: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
 
 - [x] Double-check all checkpoint 2 items (above) are complete and visible in github.
-- [ ] week 5 supplemental videos
-- [ ] add generic dao
-- [ ] Create create user jsp
-- [ ] create add user jsp
 - [x] create user entity
 - [x] create user tests for user dao
 - [x] create class to perform crud on a user
-- [ ] Choose website template
-- [ ] Create home page jsp
-- [ ] Create review search jsp
-- [ ] create review search results jsp
-- [ ] Create create user jsp
-- [ ] create add review jsp
-- [ ] Update Weekly reflection
+- [x] Update Weekly reflection
 
 
 ### Week 8 - 3/4 to 3/10 - Class topic is Web Services
 
-- [ ] implement genericDAO
-- [ ] Set up Authentication in indie project (more tasks coming for this)
 - [x] Create project DB on AWS.
 - [x] Update project config files for AWS as needed
 - [x] Deploy project to AWS
-- [ ] Add AWS deployed app link to indie project list in student repo
-- [ ] Update Weekly reflection
+- [x] Add AWS deployed app link to indie project list in student repo
+- [x] Update Weekly reflection
 
 ### Spring Break 3/11-3/17
+
+- [ ] Choose website template
+- [ ] Create home page jsp
+- [ ] Create review search jsp
+- [ ] implement genericDAO
+- [ ] Set up Authentication in indie project (more tasks coming for this)
+- [ ] create review search results jsp
+- [ ] Create create user jsp
+- [ ] create add review jsp
+
 
 ### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is RESTFul Web Services
  #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
-- [ ] create state park database 
-- [ ] add state parks and there zipcodes to database
+- [x] create state park table 
+- [x] add state parks and there zipcodes to database
 - [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.
 - [ ] Update Weekly reflection
 

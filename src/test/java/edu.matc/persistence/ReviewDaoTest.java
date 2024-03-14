@@ -24,17 +24,17 @@ class ReviewDaoTest {
 
     @Test
     void getById() {
-        Review retrievedReview = reviewDao.getById(3);
+        Review retrievedReview = reviewDao.getById(7);
         assertNotNull(retrievedReview);
-        assertEquals("Devils Lake", retrievedReview.getPark());
+        assertEquals("Devil's Lake", retrievedReview.getPark());
     }
 
     @Test
     void update() {
-        Review reviewToUpdate = reviewDao.getById(3);
+        Review reviewToUpdate = reviewDao.getById(8);
         reviewToUpdate.setCampsite("89");
         reviewDao.update(reviewToUpdate);
-        Review actualReview = reviewDao.getById(3);
+        Review actualReview = reviewDao.getById(8);
         assertEquals("89", actualReview.getCampsite());
 
     }
@@ -58,8 +58,8 @@ class ReviewDaoTest {
 
     @Test
     void delete() {
-        reviewDao.delete(reviewDao.getById(4));
-        assertNull(reviewDao.getById(4));
+        reviewDao.delete(reviewDao.getById(7));
+        assertNull(reviewDao.getById(7));
     }
 
 

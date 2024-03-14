@@ -60,7 +60,7 @@ class UserDaoTest {
 
 
     @Test
-    void deleteWithOrdersSuccess() {
+    void deleteWithReviewsSuccess() {
 
         //get the user we want to delete that has 2 orders associated
         User userToBeDeleted = userDao.getById(1);
