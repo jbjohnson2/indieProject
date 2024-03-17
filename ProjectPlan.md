@@ -61,18 +61,20 @@
 
 ### Spring Break 3/11-3/17
 
-- [ ] Choose website template
-- [ ] Create home page jsp
-- [ ] Create review search jsp
+- [x] Choose website template
+- [x] Create home page jsp
+- [x] Create review search jsp
 - [ ] implement genericDAO
 - [ ] Set up Authentication in indie project (more tasks coming for this)
-- [ ] create review search results jsp
-- [ ] Create create user jsp
-- [ ] create add review jsp
+- [x] create review search results jsp
+- [x] Create create user jsp
+- [x] create add review jsp
 
 
 ### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is RESTFul Web Services
  #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
+- [ ] implement genericDAO
+- [ ] Set up Authentication in indie project (more tasks coming for this)
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
 - [x] create state park table 
 - [x] add state parks and there zipcodes to database
@@ -80,6 +82,8 @@
 - [ ] Update Weekly reflection
 
 ### Week 10 - 3/25 to 3/31 - Work Week
+- 
+- [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.
 
 - [ ] Implement consuming a web service - zip code search
 - [ ] Update Weekly reflection

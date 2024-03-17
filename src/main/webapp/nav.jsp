@@ -3,12 +3,12 @@
         <div class="container">
             <div class="navbar-brand">
         <span class="navbar-logo">
-					<a href="https://mobiri.se">
+					<a href="index.jsp">
 						<img src="assets/images/photo-1539146395724-de109483bdd2.jpeg" style="height: 4.3rem;">
 					</a>
 				</span>
                 <span class="navbar-caption-wrap">
-          <a class="navbar-caption text-black display-4" href="https://mobiri.se">WildCamp</a>
+          <a class="navbar-caption text-black display-4" href="index.jsp">Campsite Reviewer</a>
         </span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -26,18 +26,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#">Explore</a>
+                        <a class="nav-link link text-black display-4" href="browseSites.jsp">Browse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#"
+                        <a class="nav-link link text-black display-4" href="searchSites.jsp"
                            aria-expanded="false">Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#">Review</a>
+                        <a class="nav-link link text-black display-4" href="addReview.jsp">Review</a>
                     </li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-primary display-4" href="https://mobiri.se">Join Now</a>
+                    <a class="btn btn-primary display-4" href="createAccount.jsp">Join Now</a>
                 </div>
             </div>
         </div>

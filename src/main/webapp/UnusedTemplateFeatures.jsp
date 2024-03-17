@@ -49,7 +49,7 @@
         <div class="item features-image col-12 col-md-6 col-lg-3">
             <div class="item-wrapper">
                 <div class="item-img mb-3">
-                    <img src="assets/images/photo-1629085265617-aa802730c749.jpeg">
+                    <img src="assets/images/background.jpeg">
                 </div>
                 <div class="item-content align-left">
                     <h6 class="item-subtitle mbr-fonts-style display-5">

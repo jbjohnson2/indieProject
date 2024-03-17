@@ -1205,166 +1205,21 @@
 
     </style>
 
-    <style>
-        .cid-u7iIcX0FyA {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-            background-color: transparent;
-        }
-        .cid-u7iIcX0FyA .mbr-overlay {
-            background-color: #ffffff;
-            opacity: 0.4;
-        }
-        .cid-u7iIcX0FyA form .mbr-section-btn {
-            text-align: center;
-            width: 100%;
-        }
-        .cid-u7iIcX0FyA form .mbr-section-btn .btn {
-            display: inline-flex;
-        }
-        @media (max-width: 991px) {
-            .cid-u7iIcX0FyA form .mbr-section-btn .btn {
-                width: 100%;
-            }
-        }
-        .cid-u7iIcX0FyA .content-head {
-            max-width: 800px;
-        }
+<%--from user display--%>
+    <!-- Latest compiled and minified CSS -->
+<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--%>
 
-    </style>
-    <style>
-        .cid-u7iIcX0AUK {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-            background-color: transparent;
-        }
-        .cid-u7iIcX0AUK .mbr-fallback-image.disabled {
-            display: none;
-        }
-        .cid-u7iIcX0AUK .mbr-fallback-image {
-            display: block;
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-        }
-        .cid-u7iIcX0AUK .mbr-text {
-            color: #000000;
-        }
-        .cid-u7iIcX0AUK .mbr-section-subtitle {
-            color: ##000000;
-            text-align: left;
-        }
-        .cid-u7iIcX0AUK .main-button {
-            margin-bottom: 2rem;
-        }
-        @media (max-width: 767px) {
-            .cid-u7iIcX0AUK .main-button {
-                margin-bottom: 2rem;
-            }
-        }
-        .cid-u7iIcX0AUK .mbr-section-subtitle,
-        .cid-u7iIcX0AUK .main-button {
-            color: #000000;
-        }
-        .cid-u7iIcX0AUK .google-map {
-            height: 30rem;
-            position: relative;
-            border-radius: 2rem;
-        }
-        .cid-u7iIcX0AUK .google-map iframe {
-            height: 100%;
-            width: 100%;
-            border-radius: 2rem;
-        }
-        .cid-u7iIcX0AUK .google-map [data-state-details] {
-            color: #6b6763;
-            height: 1.5em;
-            margin-top: -0.75em;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            width: 100%;
-        }
-        .cid-u7iIcX0AUK .google-map[data-state] {
-            background: #e9e5dc;
-        }
-        .cid-u7iIcX0AUK .google-map[data-state="loading"] [data-state-details] {
-            display: none;
-        }
-    </style>
+<%--    <!-- Optional theme -->--%>
+<%--    <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">--%>
 
-    <style>
-        .cid-u7iIcX0t58 {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            background-color: #000000;
-        }
-        .cid-u7iIcX0t58 .mbr-fallback-image.disabled {
-            display: none;
-        }
-        .cid-u7iIcX0t58 .mbr-fallback-image {
-            display: block;
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-        }
-        .cid-u7iIcX0t58 .copyright {
-            color: #ffffff;
-            text-align: left;
-        }
-        .cid-u7iIcX0t58 .center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        @media (max-width: 991px) {
-            .cid-u7iIcX0t58 .row {
-                flex-direction: column-reverse !important;
-            }
-            .cid-u7iIcX0t58 .row .copyright {
-                margin: 1rem 0 0 0;
-            }
-        }
-        .cid-u7iIcX0t58 .row-links {
-            width: 100%;
-            justify-content: center;
-        }
-        .cid-u7iIcX0t58 .row-links .row-links-soc {
-            list-style: none;
-            display: flex;
-            justify-content: right;
-            flex-wrap: wrap;
-            padding: 0;
-            margin-bottom: 0;
-        }
-        @media (max-width: 991px) {
-            .cid-u7iIcX0t58 .row-links .row-links-soc {
-                justify-content: center;
-            }
-        }
-        .cid-u7iIcX0t58 .row-links .row-links-soc li {
-            padding: 0 1rem 0rem 1rem;
-        }
-        @media (max-width: 767px) {
-            .cid-u7iIcX0t58 .row-links .row-links-soc li {
-                padding: 0 1rem 1rem 1rem;
-            }
-        }
-        .cid-u7iIcX0t58 .row-links .row-links-soc li p {
-            margin: 0;
-        }
-        @media (max-width: 991px) {
-            .cid-u7iIcX0t58 .copyright {
-                text-align: center;
-            }
-        }
-    </style>
+<%--    <!-- Latest compiled and minified JavaScript -->--%>
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--%>
+
+<%--    <!-- jQuery slim -->--%>
+<%--    <script src="https://code.jquery.com/jquery-3.1.1.slim.js" integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="   crossorigin="anonymous"></script>--%>
+
+<%--    <!-- The next two items are to support jQuery datatables. Learn more about datatables here:https://datatables.net -->--%>
+<%--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">--%>
+<%--    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>--%>
+
 </head>

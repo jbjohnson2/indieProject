@@ -19,7 +19,7 @@
           <strong>Camp Critique</strong>
         </h1>
         <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Unleash Your Inner Explorer and Share Your Wildest Campsite Adventures with the World!</p>
-        <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="#">Get Started</a></div>
+        <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="createAccount.jsp">Get Started</a></div>
       </div>
     </div>
   </div>
