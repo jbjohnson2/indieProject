@@ -15,6 +15,30 @@
     <button type="submit" name="submit" value="search" class="btn btn-primary">Search</button>
     <button type="submit" name="submit" value="viewAll" class="btn btn-primary">View All Users</button>
 </form>
+
+
+<form>
+    <div class="form-group">
+        <label for="park">Select Park:</label>
+        <select id="park" name="park">
+            <option value="governorDodge">Governor Dodge</option>
+            <option value="wyalusing">Wyalusing</option>
+            <option value="devilsLake">Devil's Lake</option>
+            <option value="lakeKegonsa">Lake Kegonsa</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="campground">Campground:</label>
+        <input type="text" id="campground" name="campground">
+    </div>
+
+
+
+
+
+
+
+</form>
 </body>
 <%@include file="footer.jsp"%>
 </html>
