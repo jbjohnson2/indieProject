@@ -64,8 +64,6 @@
 - [x] Choose website template
 - [x] Create home page jsp
 - [x] Create review search jsp
-- [ ] implement genericDAO
-- [ ] Set up Authentication in indie project (more tasks coming for this)
 - [x] create review search results jsp
 - [x] Create create user jsp
 - [x] create add review jsp
@@ -75,33 +73,40 @@
  #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 - [ ] implement genericDAO
 - [ ] Set up Authentication in indie project (more tasks coming for this)
+- [x] update project plan
 - [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
 - [x] create state park table 
 - [x] add state parks and there zipcodes to database
-- [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.
+- [ ] make reviews searchable by keyword
+- [ ] add plug or use project lambock so comments/code can be generated 
 - [ ] Update Weekly reflection
 
 ### Week 10 - 3/25 to 3/31 - Work Week
-- 
-- [ ] add any missing project pieces needed so that reviews can be searched and  users can be added, edited and deleted.
 
-- [ ] Implement consuming a web service - zip code search
+- [ ] update login page
+- [ ] fix clunky login process
+- [ ] create a profile jsp where users are directed to after sign in that displays their reviews
+- [ ] add a display of recent reviews on the home page
+- [ ] Update add review page so that it uses the user Id of the user who is logged in
 - [ ] Update Weekly reflection
 
 ### Week 11 - 4/1 to 4/7 - Work Week
-
+- [ ] Implement consuming a web service - zip code search
+- [ ] work on styling
 - [ ] create a jsp for a page where users can view/edit/delete their reviews
 - [ ] create a controller to perform the view/edit/delete of those reviews
 - [ ] Update Weekly reflection
 
 ### Week 12 - 4/8 to 4/14 - Team Presentations
 
-- [ ] Add additional unit tests for more code coverage
-- [ ] if MVP is working, add additional features
+- [ ] Create browse jsp and controller
+- [ ] Add additional unit tests for more code coverage 
+- [ ] if MVP is working, add additional features such as adding a photo to  review
 - [ ] Update Weekly reflection
 
 ### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
 
+- [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
 - [ ] Update Weekly reflection
