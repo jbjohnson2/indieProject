@@ -35,6 +35,9 @@
                     <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="addReview.jsp">Review</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link link text-black display-4" href="login.jsp">Login</a>
+                    </li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn">
                     <a class="btn btn-primary display-4" href="createAccount.jsp">Join Now</a>
