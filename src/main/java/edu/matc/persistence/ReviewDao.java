@@ -84,7 +84,7 @@ public class ReviewDao {
         Root<Review> root = query.from(Review.class);
         List<Review> reviews = session.createSelectionQuery( query ).getResultList();
 
-        logger.debug("The list of reviews " + reviews);
+        //logger.debug("The list of reviews " + reviews);
         session.close();
 
         return reviews;
@@ -97,7 +97,7 @@ public class ReviewDao {
     public List<Review> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
-        logger.debug("Searching for review with " + propertyName + " = " + value);
+        //logger.debug("Searching for review with " + propertyName + " = " + value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Review> query = builder.createQuery(Review.class);
@@ -116,7 +116,7 @@ public class ReviewDao {
     public List<Review> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
-        logger.debug("Searching for review with {} = {}",  propertyName, value);
+        //logger.debug("Searching for review with {} = {}",  propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Review> query = builder.createQuery(Review.class);

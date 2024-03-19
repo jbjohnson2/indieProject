@@ -21,10 +21,10 @@
                 <div class="form-group">
                     <label for="park">Select Park:</label>
                     <select id="park" name="park">
-                        <option value="governorDodge">Governor Dodge</option>
-                        <option value="wyalusing">Wyalusing</option>
-                        <option value="devilsLake">Devil's Lake</option>
-                        <option value="lakeKegonsa">Lake Kegonsa</option>
+                        <option value="Governor Dodge">Governor Dodge</option>
+                        <option value="Wyalusing">Wyalusing</option>
+                        <option value="Devil's Lake">Devil's Lake</option>
+                        <option value="Lake Kegonsa">Lake Kegonsa</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -85,8 +85,8 @@
                         <option value="F">F</option>
                     </select>
                 </div>
-                <p><label for="review_text">Review:</label></p>
-                <textarea id="review_text" name="review_text" rows="4" cols="50"></textarea>
+                <p><label for="reviewText">Review:</label></p>
+                <textarea id="reviewText" name="reviewText" rows="4" cols="50"></textarea>
                 <br>
 
                 <button type="submit" name="submit" value="search" class="btn btn-primary">Submit</button>

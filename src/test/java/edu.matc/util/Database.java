@@ -70,6 +70,7 @@ public class Database implements PropertiesLoader {
         }
 
         String url = properties.getProperty("url");
+        //logger.debug(url);
         connection = DriverManager.getConnection(url, properties.getProperty("username"),  properties.getProperty("password"));
     }
 
