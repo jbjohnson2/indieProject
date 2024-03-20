@@ -51,7 +51,7 @@
 | 03/13/24 | database updates                                                                     | 1     | |
 | 3/14/24  | database work/time zone issue                                                        | 2     | |
 | 3/17/24  | project work                                                                         | 3     | |
-| 3/19/24  | project-getting database fixed in aws and tests passing, implementing cognito        | 3     | |
+| 3/19/24  | project-getting database fixed in aws and tests passing, implementing cognito        | 4     | |
 |          |                                                                                      |       | |
 |          |                                                                                      |       | |
 |          |                                                                                      |       | |
