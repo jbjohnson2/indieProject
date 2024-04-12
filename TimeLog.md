@@ -67,7 +67,7 @@
 | 04/09/24 | team meeting - finish team project                                                   | 2     |       |
 | 04/10/24 | team meeting - create presentation                                                   | 1     |       |
 | 04/11/24 | watch prof dev presentations and comment on them                                     | 3     |       |
-|          |                                                                                      |       |       |
+| 04/12/24 | watch team project presentation/update time log                                      | 1     |       |
 |          |                                                                                      |       |       |
 |          |                                                                                      |       |       |
 |          |                                                                                      |       |       |
