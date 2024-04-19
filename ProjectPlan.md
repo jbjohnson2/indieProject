@@ -71,58 +71,59 @@
 
 ### Week 9 - 3/18 to 3/24 -(Start of the team project) Class topic is RESTFul Web Services
  #### Checkpoint 3 is Due on 3/20: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
-- [ ] implement genericDAO
-- [ ] Set up Authentication in indie project (more tasks coming for this)
+
+- [x] Set up Authentication in indie project (more tasks coming for this)
 - [x] update project plan
-- [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
+- [x] Double-check all checkpoint 3 items (above) are complete and visible in github.
 - [x] create state park table 
 - [x] add state parks and there zipcodes to database
-- [ ] make reviews searchable by keyword
-- [ ] add plug or use project lambock so comments/code can be generated 
-- [ ] Update Weekly reflection
+- [x] Update time log
 
 ### Week 10 - 3/25 to 3/31 - Work Week
 
+- [x] Update time log
+
+### Week 11 - 4/1 to 4/7 - Work Week
+
+- [x] Update time log
+
+### Week 12 - 4/8 to 4/14 - Team Presentations
+
+
+- [x] update time log
+
+### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
+- [ ] implement genericDAO
+- [ ] make reviews searchable by keyword
+- [ ] add plug or use project lambock so comments/code can be generated
 - [ ] update login page
 - [ ] fix clunky login process
 - [ ] create a profile jsp where users are directed to after sign in that displays their reviews
 - [ ] add a display of recent reviews on the home page
 - [ ] Update add review page so that it uses the user Id of the user who is logged in
-- [ ] Update Weekly reflection
-
-### Week 11 - 4/1 to 4/7 - Work Week
 - [ ] Implement consuming a web service - zip code search
 - [ ] work on styling
 - [ ] create a jsp for a page where users can view/edit/delete their reviews
 - [ ] create a controller to perform the view/edit/delete of those reviews
-- [ ] Update Weekly reflection
 
-### Week 12 - 4/8 to 4/14 - Team Presentations
+### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
 
 - [ ] Create browse jsp and controller
-- [ ] Add additional unit tests for more code coverage 
-- [ ] if MVP is working, add additional features such as adding a photo to  review
-- [ ] Update Weekly reflection
-
-### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
-
+- [ ] Add additional unit tests for more code coverage
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
 - [ ] Update Weekly reflection
+- [ ] Update time log
 
-### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
-
+### Week 15 - 4/29 to 5/5 - Work week
 - [ ] Final Presentation
 - [ ] Create video, add video link to readme.md
 - [ ] Finalize all documentation
 - [ ] Code quality check
-- [ ] Update Weekly reflection
-
-### Week 15 - 4/29 to 5/5 - Work week
 - [ ] Implement Feedback from Week 14 review
 - [ ] Add video demonstration link to readme
-- [ ] Update journal entry
+- [ ] Update time log
 - [ ] Final touches before code complete
 
 
