@@ -2,7 +2,6 @@ package edu.matc.controller;
 
 
 import edu.matc.persistence.ReviewDao;
-import edu.matc.persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,14 +20,16 @@ import java.io.IOException;
         urlPatterns = {"/searchReview"}
 )
 
-public class SearchUser extends HttpServlet {
+public class SearchReview extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //gets form data and uses it to execute a search or get all reviews
         ReviewDao reviewDao = new ReviewDao();//        UserData userData = new UserData();
-        if (req.getParameter("submit").equals("search")) {
+        if (req.getParameter("submit").equals("searchByPark")) {
             req.setAttribute("reviews", reviewDao.getByPropertyEqual("park", req.getParameter("parkName")));
+        } else if(req.getParameter("submit").equals("searchByKeyword")) {
+            req.setAttribute("reviews", reviewDao.getByPropertyLike("reviewText", req.getParameter("keyword")));
         } else {
             req.setAttribute("reviews", reviewDao.getAll());
         }

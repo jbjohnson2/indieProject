@@ -116,7 +116,7 @@ public class ReviewDao {
     public List<Review> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
-        //logger.debug("Searching for review with {} = {}",  propertyName, value);
+        logger.debug("Searching for review with {} = {}",  propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Review> query = builder.createQuery(Review.class);
