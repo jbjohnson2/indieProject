@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * a class to represent a  User.
@@ -187,4 +188,21 @@ public class User {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals (lastName, user.lastName)  &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(emailAddress, user.emailAddress) &&
+                Objects.equals(zipcode, user.zipcode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, userName, emailAddress, zipcode);
+    }
 }
