@@ -93,7 +93,7 @@
 - [x] update time log
 
 ### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
-- [ ] implement genericDAO
+- [x] implement genericDAO
 - [X] make reviews searchable by keyword
 - [x] add plugin  or use project lambock so comments/code can be generated
 - [ ] update login page

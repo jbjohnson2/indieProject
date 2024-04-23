@@ -31,6 +31,7 @@ The goal of my project would be to provide a centralized place  where people can
 * Unit Testing
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA
+* Generating Mock Data: Mockaroo
 
 * Technologies I may want to implement
     * Hibernate validator
