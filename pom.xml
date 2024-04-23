@@ -21,9 +21,29 @@
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
         <maven-surefire-plugin-version>2.19</maven-surefire-plugin-version>
         <hibernate-version>6.4.3.Final</hibernate-version>
+        <lombok-version>1.18.10</lombok-version>
+
     </properties>
 
     <dependencies>
+        <!-- TODO add versions to properties element rather than hard-coding -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20170516</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -109,6 +129,24 @@
                             <version>${junit-platform-runner-version}</version>
                         </dependency>
                     </dependencies>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                    <configuration>
+                        <webResources>
+                            <resource>
+                                <directory>src/main/.platform</directory>
+                                <targetPath>.platform</targetPath>
+                                <filtering>true</filtering>
+                            </resource>
+                            <resource>
+                                <directory>src/main/.ebextensions</directory>
+                                <targetPath>.ebextensions</targetPath>
+                                <filtering>true</filtering>
+                            </resource>
+                        </webResources>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

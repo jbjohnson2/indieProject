@@ -17,30 +17,21 @@
                         <input type="text" class="form-control" id="parkName" name="parkName" aria-describedby="searchTermHelp"
                                placeholder="Enter park name">
                     </div>
-                    <button type="submit" name="submit" value="search" class="btn btn-primary">Search</button>
+                    <button type="submit" name="submit" value="searchByPark" class="btn btn-primary">Search by Park</button>
+
+                    <div class="=form-group">
+                        <label for="keyword">Search</label>
+                        <input type="text" class="form-control" id="keyword" name="keyword" aria-describedby="searchTermHelp"
+                               placeholder="Enter keyword">
+                    </div>
+                    <button type="submit" name="submit" value="searchByKeyword" class="btn btn-primary">Search by Keyword</button>
+
                     <button type="submit" name="submit" value="viewAll" class="btn btn-primary">View All Reviews</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-<body>
-<h2>Campsite Reviewer</h2>
-
-
-<form action="searchUser" class="form-inline">
-    <div class="=form-group">
-        <label for="searchTerm">Search</label>
-        <input type="text" class="form-control" id="searchTerm" name="searchTerm" aria-describedby="searchTermHelp"
-               placeholder="Enter last name">
-    </div>
-    <button type="submit" name="submit" value="search" class="btn btn-primary">Search</button>
-    <button type="submit" name="submit" value="viewAll" class="btn btn-primary">View All Users</button>
-</form>
-
-
-
-
 </body>
 <%@include file="footer.jsp"%>
 </html>

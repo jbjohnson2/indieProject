@@ -58,3 +58,8 @@ fabric.properties
 
 
 /src/main/resources/
+/cognito-example-key.pem
+/csr.pem
+/public.crt
+/src/main/.platform/
+/src/main/.ebextensions/
