@@ -94,8 +94,8 @@
 
 ### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
 - [ ] implement genericDAO
-- [ ] make reviews searchable by keyword
-- [ ] add plugin  or use project lambock so comments/code can be generated
+- [X] make reviews searchable by keyword
+- [x] add plugin  or use project lambock so comments/code can be generated
 - [ ] update login page
 - [ ] fix clunky login process
 - [ ] create a profile jsp where users are directed to after sign in that displays their reviews
