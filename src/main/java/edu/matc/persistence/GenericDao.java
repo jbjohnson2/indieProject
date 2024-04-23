@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import edu.matc.entity.Review;
 import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
@@ -124,6 +126,30 @@ public class GenericDao<T> {
         session.close();
         return items;
     }
+
+
+    /**
+     * Get review by property (like)
+     * sample usage: getByPropertyLike("lastname", "C")
+     */
+    public List<T> getByPropertyLike(String propertyName, String value) {
+        Session session = getSession();
+      //logger.debug("Searching for review with {} = {}",  propertyName, value);
+
+        HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get(propertyName);
+
+        query.where(builder.like(propertyPath, "%" + value + "%"));
+
+        List<T> items = session.createQuery(query).getResultList();
+        session.close();
+        return items;
+    }
+
+
+
 
     /**
      * Finds entities by multiple properties.
