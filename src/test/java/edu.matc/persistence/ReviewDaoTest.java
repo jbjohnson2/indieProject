@@ -10,74 +10,105 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The type Review dao test.
+ */
 class ReviewDaoTest {
 
-    ReviewDao reviewDao;
+    /**
+     * The Generic dao.
+     */
+    GenericDao genericDao;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleanDB.sql");
-        reviewDao = new ReviewDao();
+        genericDao = new GenericDao(Review.class);
     }
 
-
+    /**
+     * Gets all.
+     */
+    @Test
+    void getAll() {
+        List<Review> reviews = genericDao.getAll();
+        assertEquals(4, reviews.size());
+    }
+    /**
+     * Gets review by id.
+     */
     @Test
     void getById() {
-        Review retrievedReview = reviewDao.getById(7);
+        Review retrievedReview = (Review)genericDao.getById(7);
         assertNotNull(retrievedReview);
-        assertEquals("Devil's Lake", retrievedReview.getPark());
+        assertEquals(retrievedReview, genericDao.getById(7));
     }
 
+    /**
+     * Update review.
+     */
     @Test
     void update() {
-        Review reviewToUpdate = reviewDao.getById(8);
+        Review reviewToUpdate = (Review)genericDao.getById(8);
         reviewToUpdate.setCampsite("89");
-        reviewDao.update(reviewToUpdate);
-        Review actualReview = reviewDao.getById(8);
-        assertEquals("89", actualReview.getCampsite());
+        genericDao.update(reviewToUpdate);
+        Review retrievedReview = (Review)genericDao.getById(8);
+        assertEquals(reviewToUpdate,retrievedReview);
 
     }
 
+    /**
+     * Insert Review
+     */
     @Test
     void insert() {
+
         UserDao userDao = new UserDao();
         User user = userDao.getById(3);
 
         Review reviewToInsert= new Review("Mirror Lake", "CliffWood", "89", "A",
                     "B", "C", "D", "F", "cool", user);
-        int insertedReviewId = reviewDao.insert(reviewToInsert);
+        int insertedReviewId = genericDao.insert(reviewToInsert);
         assertNotEquals(0, insertedReviewId);
-        Review insertedReview = reviewDao.getById((insertedReviewId));
-        assertEquals("Mirror Lake", insertedReview.getPark());
+        Review insertedReview = (Review)genericDao.getById((insertedReviewId));
+        assertEquals(reviewToInsert, insertedReview);
 
-        assertEquals("DJ", insertedReview.getUser().getFirstName());
+        assertEquals(user.getFirstName(), insertedReview.getUser().getFirstName());
 
     }
 
 
+    /**
+     * Delete review.
+     */
     @Test
     void delete() {
-        reviewDao.delete(reviewDao.getById(7));
-        assertNull(reviewDao.getById(7));
+        genericDao.delete(genericDao.getById(7));
+        assertNull(genericDao.getById(7));
     }
 
 
-    @Test
-    void getAll() {
-        List<Review> reviews = reviewDao.getAll();
-        assertEquals(4, reviews.size());
-    }
 
+
+    /**
+     * Gets by property equal.
+     */
     @Test
-    void getByPropertyEqual() {
-        List<Review> reviews = reviewDao.getByPropertyEqual("shade", "A");
+    void findByPropertyEqual() {
+        List<Review> reviews = genericDao.findByPropertyEqual("shade", "A");
         assertEquals(1, reviews.size());
     }
 
+    /**
+     * Gets by property like.
+     */
     @Test
-    void getByPropertyLike() {
-        List<Review> reviews = reviewDao.getByPropertyLike("reviewText", "nice");
+    void ByPropertyLike() {
+        List<Review> reviews = genericDao.getByPropertyLike("reviewText", "nice");
         assertEquals(2, reviews.size());
     }
 }

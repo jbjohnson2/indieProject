@@ -3,6 +3,8 @@ package edu.matc.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Objects;
+
 /**
  * The class to represent a  Review
  */
@@ -294,4 +296,30 @@ public class Review {
                 ", user=" + user +
                 '}';
     }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Review review = (Review) o;
+        return id == review.id &&
+                Objects.equals(park, review.park) &&
+                Objects.equals (campground, review.campground)  &&
+                Objects.equals(shade, review.shade) &&
+                Objects.equals(size, review.size) &&
+                Objects.equals(bathroomAccess, review.bathroomAccess) &&
+                Objects.equals(kidFriendliness, review.kidFriendliness) &&
+                Objects.equals(dogFriendliness, review.dogFriendliness) &&
+                Objects.equals(reviewText, review.reviewText);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, park, campground, shade, size, bathroomAccess,
+                kidFriendliness, dogFriendliness);
+    }
 }
+
+
