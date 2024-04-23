@@ -75,7 +75,7 @@
 |          | Upload prof dev presentation/learning tracker                                                                  | 1     |       |
 | 04/19/24 | Respond to team project comments, watch last prof dev presentation and prov feedback/look over indie proj plan | 1     |       |
 | 04/22/24 | Make reviews searchable by keyword                                                                             | 1     |       |
-| 04/23/24 | Implement genericDao, use mockaroo to add mock data to database                                                | 2     |       |
+| 04/23/24 | Implement genericDao, use mockaroo to add mock data to database, work on styling                               | 3     |       |
 |          |                                                                                                                |       |       |
 |          |                                                                                                                |       |       |
 |          |                                                                                                                |       |       |
