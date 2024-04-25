@@ -12,7 +12,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 /**
- * A simple servlet to welcome the user.
+ * a servlet to route the user to the correct search results
  *
  * @author pwaite
  */
