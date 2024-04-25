@@ -71,7 +71,7 @@
 <%--<%@include file="faq.jsp"%>--%>
 <%--<%@include file="gallery.jsp"%>--%>
 
-<%@include file="recentReviews.jsp"%>
+
 <%@include file="signup.jsp"%>
 
 
