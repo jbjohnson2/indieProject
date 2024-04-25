@@ -96,19 +96,19 @@
 - [x] implement genericDAO
 - [X] make reviews searchable by keyword
 - [x] add plugin  or use project lambock so comments/code can be generated
+- [X] update time log
+
+### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
 - [ ] update login page
 - [ ] fix clunky login process
 - [ ] create a profile jsp where users are directed to after sign in that displays their reviews
-- [ ] add a display of recent reviews on the home page
+- [X] add a display of recent reviews on the browse page
 - [ ] Update add review page so that it uses the user Id of the user who is logged in
 - [ ] Implement consuming a web service - zip code search
 - [ ] work on styling
 - [ ] create a jsp for a page where users can view/edit/delete their reviews
 - [ ] create a controller to perform the view/edit/delete of those reviews
-
-### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
-
-- [ ] Create browse jsp and controller
+- [X] Create browse jsp and controller
 - [ ] Add additional unit tests for more code coverage
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
