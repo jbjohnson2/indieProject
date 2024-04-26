@@ -99,15 +99,14 @@
 - [X] update time log
 
 ### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
-- [ ] update login page
-- [ ] fix clunky login process
-- [ ] create a profile jsp where users are directed to after sign in that displays their reviews
+
+- [X] create a userPage jsp where users are directed to after sign in that displays their reviews
 - [X] add a display of recent reviews on the browse page
 - [ ] Update add review page so that it uses the user Id of the user who is logged in
 - [ ] Implement consuming a web service - zip code search
 - [ ] work on styling
-- [ ] create a jsp for a page where users can view/edit/delete their reviews
-- [ ] create a controller to perform the view/edit/delete of those reviews
+- [X] create a jsp for a page where users can view/edit/delete their reviews
+- [X] create a controller to perform the view/edit/delete of those reviews
 - [X] Create browse jsp and controller
 - [ ] Add additional unit tests for more code coverage
 - [ ] look over rubric to ensure project meets all requirements
