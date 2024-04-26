@@ -14,7 +14,7 @@
             <div class="col-12 content-head">
                 <div class="mbr-section-head">
                     <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Recent Reviews</strong>
+                        <strong>My Reviews</strong>
                     </h4>
                 </div>
             </div>
@@ -23,9 +23,6 @@
             <div class="row"    >
                 <div class="item features-image col-12 col-md-6 col-lg-4 active">
                     <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/photo-1504808951974-0573d32c306b.jpeg">
-                        </div>
                         <div class="item-content align-left">
                             <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
                                 <strong><a class="text-black fw-bold">${review.park}</a></strong>
@@ -47,4 +44,6 @@
     </div>
 </section>
 </body>
+<%@include file="footer.jsp"%>
+
 </html>
