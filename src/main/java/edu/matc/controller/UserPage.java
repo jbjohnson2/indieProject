@@ -32,12 +32,12 @@ public class UserPage extends HttpServlet {
         //gets form data and uses it to execute a search or get all reviews
         GenericDao reviewDao = new GenericDao(Review.class);
         GenericDao userDao = new GenericDao(User.class);
-        
+
 
         Review review = new Review();
         String username = req.getParameter("userName");
         //stub for user to test userpage before connecting to aws
-        List<User> userList = userDao.findByPropertyEqual("userName", "catRat");
+        List<User> userList = userDao.findByPropertyEqual("userName", "pillowcat");
         User user = (User) userDao.getById(userList.get(0).getId());
         List<Review> userReviews = user.getReviews();
         req.setAttribute("User", user);
