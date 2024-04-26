@@ -1,4 +1,3 @@
-
 package edu.matc.controller;
 
 
@@ -15,17 +14,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
+import java.util.List;
 
 @WebServlet(
-        urlPatterns = {"/addReview"}
+        urlPatterns = {"/userPage"}
 )
 
-public class AddReview extends HttpServlet {
-
+public class UserPage extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 
         //gets form data and uses it to execute a search or get all reviews
         GenericDao reviewDao = new GenericDao(Review.class);
@@ -33,22 +32,15 @@ public class AddReview extends HttpServlet {
 
 
         Review review = new Review();
-        int userID = Integer.parseInt(req.getParameter("userID"));
-        User user = (User)userDao.getById(userID);
-        review.setUser(user);
-        review.setPark(req.getParameter("park"));
-        review.setCampground(req.getParameter("campground"));
-        review.setCampsite(req.getParameter("campsite"));
-        review.setSize(req.getParameter("size"));
-        review.setShade(req.getParameter("shade"));
-        review.setBathroomAccess(req.getParameter("bathroomAccess"));
-        review.setKidFriendliness(req.getParameter("kidFriendliness"));
-        review.setDogFriendliness(req.getParameter("dogFriendliness"));
-        review.setReviewText(req.getParameter("reviewText"));
-        int addedReviewID = reviewDao.insert(review);
-        req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", addedReviewID));
+        String username = req.getParameter("userName");
+        User user = (User)userDao.findByPropertyEqual("userName", username);
+        List<Review> userReviews = user.getReviews();
+
+        req.setAttribute("userReviews", userReviews);
+
 //        logger.debug(review);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(req, resp);
     }
+
 }
