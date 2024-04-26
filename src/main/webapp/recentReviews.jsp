@@ -37,7 +37,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1504808951974-0573d32c306b.jpeg">
+                        <img src="assets/images/photo-1536690005863-b692796c8e22.jpeg">
                     </div>
                     <div class="item-content align-left">
                         <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
@@ -58,7 +58,7 @@
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="assets/images/photo-1504808951974-0573d32c306b.jpeg">
+                        <img src="assets/images/photo-1526491109672-74740652b963.jpeg">
                     </div>
                     <div class="item-content align-left">
                         <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
