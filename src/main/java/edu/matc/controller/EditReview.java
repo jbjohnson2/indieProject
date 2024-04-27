@@ -27,9 +27,10 @@ public class EditReview extends HttpServlet {
 
         //gets form data and uses it to execute a search or get all reviews
         GenericDao genericDao = new GenericDao(Review.class);
+        Review reviewToEdit = (Review)genericDao.getById(Integer.parseInt(req.getParameter("reviewID")));
+        req.setAttribute("review", reviewToEdit);
 
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/editReview.jsp");
         dispatcher.forward(req, resp);
     }
 }

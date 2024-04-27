@@ -36,8 +36,11 @@ public class UserPage extends HttpServlet {
 
         Review review = new Review();
         String username = req.getParameter("userName");
+        logger.debug("The username:" + username);
+
         //stub for user to test userpage before connecting to aws
-        List<User> userList = userDao.findByPropertyEqual("userName", "pillowcat");
+        List<User> userList = userDao.findByPropertyEqual("userName", username);
+        logger.debug(userList);
         User user = (User) userDao.getById(userList.get(0).getId());
         List<Review> userReviews = user.getReviews();
         req.setAttribute("User", user);
