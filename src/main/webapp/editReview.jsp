@@ -12,15 +12,15 @@
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
     <div class="container-fluid col-12 col-md-4" style="background-color: blanchedalmond">
-        <form action="addReview">
-            <h2>Add Your Review</h2>
+        <form action="editReviewAction">
+            <h2>Edit Review Your Review</h2>
             <div class="form-group">
                 <label for="userID">User:</label>
                 <input type="text" id="userID" name="userID">
             </div>
             <div class="form-group">
                 <label for="park">Select Park:</label>
-                <select id="park" name="park">
+                <select  id="park" name="park" defaultValue="${review.park}">
                     <option value="Amnicon Falls">Amnicon Falls</option>
                     <option value="Big Bay">Big Bay</option>
                     <option value="Big Foot Beach">Big Foot Beach</option>
@@ -64,15 +64,15 @@
             </div>
             <div class="form-group">
                 <label for="campground">Campground:</label>
-                <input type="text" id="campground" name="campground">
+                <input type="text" id="campground" name="campground" value="${review.campground}">
             </div>
             <div class="form-group">
                 <label for="campsite">Campsite:</label>
-                <input type="text" id="campsite" name="campsite">
+                <input type="text" id="campsite" name="campsite" value=${review.campsite}>
             </div>
             <div class="form-group">
                 <label for="shade">Shade:</label>
-                <select id="shade" name="shade">
+                <select defaultValue="${review.shade}" id="shade" name="shade" >
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>

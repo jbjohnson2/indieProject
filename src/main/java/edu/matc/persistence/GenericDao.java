@@ -72,7 +72,7 @@ public class GenericDao<T> {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
         session.remove(entity);
-        logger.debug(entity);
+//        logger.debug(entity);
         transaction.commit();
         session.close();
     }
@@ -134,7 +134,7 @@ public class GenericDao<T> {
      */
     public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
-      //logger.debug("Searching for review with {} = {}",  propertyName, value);
+      logger.debug("Searching for review with {} = {}",  propertyName, value);
 
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);

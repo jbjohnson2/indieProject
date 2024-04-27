@@ -78,6 +78,6 @@
 | 04/23/24 | Implement genericDao, use mockaroo to add mock data to database, work on styling                               | 3     |       |
 | 04/25/24 | Add recent reviews and a table with all reviews to browse page                                                 | 1     |       |
 |          | Update Add Review page                                                                                         | 1     |       |
-|          |                                                                                                                |       |       |
+| 04/26/24 | Add  user page, add delete function to user page, add controllers                                              | 3     |       |
 |          |                                                                                                                |       |       |
 

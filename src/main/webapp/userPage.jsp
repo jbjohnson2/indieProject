@@ -3,7 +3,7 @@
 <html>
 
 <%@include file="head.jsp"%>
-<%@include file="nav.jsp"%>
+<%@include file="navLoggedIn.jsp"%>
 <head>
     <title>User Page</title>
 </head>
@@ -19,8 +19,11 @@
                 </div>
             </div>
         </div>
-        <c:forEach var="review" items="${userReviews}">
-            <div class="row"    >
+        <c:forEach var="review" items="${userReviews}" varStatus="loopCounter">
+
+        <c:out value="${loopCounter.count}"/>
+
+            <div class="row">
                 <div class="item features-image col-12 col-md-6 col-lg-4 active">
                     <div class="item-wrapper">
                         <div class="item-content align-left">
@@ -36,6 +39,16 @@
                             <li>Dog Friendliness: ${review.dogFriendliness}</li>
                         </ul></p>
                             <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${review.reviewText}</div>
+                                <form action="editReview" class ="form-inline">
+                                    <input type="hidden" name="reviewID" value=${review.id} />
+                                    <button type="submit" name="edit" value="edit" class="btn btn-primary">Edit Review</button>
+                                </form>
+                                <form action="deleteReview" class="form-inline">
+                                    <input type="hidden" name="reviewID" value=${review.id} />
+                                    <button type="submit" name="delete" value="delete" class="btn btn-primary">Delete Review</button>
+                                </form>
+                        </div>
+
                         </div>
                     </div>
                 </div>
