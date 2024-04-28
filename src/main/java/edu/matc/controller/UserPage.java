@@ -45,6 +45,7 @@ public class UserPage extends HttpServlet {
         List<Review> userReviews = user.getReviews();
         req.setAttribute("User", user);
         req.setAttribute("userReviews", userReviews);
+        req.setAttribute("message", "");
 
 //        logger.debug(review);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
