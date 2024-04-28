@@ -38,13 +38,13 @@ public class UserPage extends HttpServlet {
         String username = req.getParameter("userName");
         logger.debug("The username:" + username);
 
-        //stub for user to test userpage before connecting to aws
         List<User> userList = userDao.findByPropertyEqual("userName", username);
         logger.debug(userList);
         User user = (User) userDao.getById(userList.get(0).getId());
         List<Review> userReviews = user.getReviews();
         req.setAttribute("User", user);
         req.setAttribute("userReviews", userReviews);
+
 
 //        logger.debug(review);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
