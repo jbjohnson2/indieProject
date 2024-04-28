@@ -10,6 +10,7 @@
 <body>
 <section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo">
     <div class="container-fluid">
+
         <div class="row justify-content-center mb-5">
             <div class="col-12 content-head">
                 <div class="mbr-section-head">
@@ -57,6 +58,7 @@
         <div class="item features-image col-12 col-md-6 col-lg-4 active">
             <div class="item-wrapper">
                 <h3> ${message}</h3>
+                <c:remove var="message" ></c:remove>
                 <h4 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
                     <strong>Find the distance to a park</strong>
                 </h4>
@@ -104,7 +106,7 @@
                                 <option value=35>Wyalusing</option>
                                 <option value=36>Yellowstone Lake</option>
                             </select>
-                        <input type="hidden" name="userZipcode" value=${user.zipcode} />
+                        <input type="hidden" name="userZipcode" value=${User.zipcode} />
                         <button type="submit" name="edit" value="edit" class="btn btn-primary">Find Distance</button>
                     </form>
 

@@ -34,11 +34,10 @@ public class FindDistance extends HttpServlet {
         StatePark statePark = (StatePark) genericDao.getById(Integer.parseInt(req.getParameter("park")));
         int parkZip = statePark.getZipcode();
         int userZip = Integer.parseInt(req.getParameter("userZipcode"));
-        double distance = zipcodeApiDao.getDistance(userZip, parkZip);
-        logger.debug(distance);
+        int distance = (int) zipcodeApiDao.getDistance(userZip, parkZip);
 
         req.setAttribute("distance", distance);
-        req.setAttribute("message", ("The distance to " + statePark.getParkName() + " is " + distance + "."));
+        req.setAttribute("message", ("The distance to " + statePark.getParkName() + " is " + distance + " miles."));
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage");
         dispatcher.forward(req, resp);
     }

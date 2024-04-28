@@ -7,6 +7,8 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.auth.*;
+import edu.matc.entity.User;
+import edu.matc.persistence.GenericDao;
 import edu.matc.util.PropertiesLoader;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -36,6 +38,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
@@ -96,6 +99,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("userPage");
         dispatcher.forward(req, resp);
 
@@ -171,7 +175,23 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String userName = jwt.getClaim("cognito:username").asString();
+
+
+
+        GenericDao genericDao = new GenericDao(User.class);
+        List<User> users = genericDao.findByPropertyEqual("userName", userName);
         logger.debug("here's the username: " + userName);
+        if(users.isEmpty()) {
+            String firstName = jwt.getClaim("cognito:given_name").asString();
+            String lastName = jwt.getClaim("cognito:family_name").asString();
+            String email = jwt.getClaim("cognito:email").asString();
+            int zipcode = jwt.getClaim("cognito:zipcode").asInt();
+            User user = new User(firstName, lastName, userName, email, zipcode);
+            genericDao.insert(user);
+
+            logger.debug("here is the first name" + firstName);
+            logger.debug(user);
+        }
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
