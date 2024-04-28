@@ -10,8 +10,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * The type User dao test.
  */
