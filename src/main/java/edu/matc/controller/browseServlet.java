@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * a servlet to welcome the user and set recent reviews
+ * a servlet to set recent reviews and display a searchable list of all reviews
  */
 
 @WebServlet(

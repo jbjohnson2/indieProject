@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * a class to represent a  User.
+ * User Entity
  */
 @Entity
 @Table(name = "users")

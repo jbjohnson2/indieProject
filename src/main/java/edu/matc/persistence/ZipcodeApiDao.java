@@ -16,8 +16,14 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * The type Zipcode api dao.
+ */
 public class ZipcodeApiDao {
 
+    /**
+     * The Generic dao.
+     */
     GenericDao genericDao;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -28,6 +34,13 @@ public class ZipcodeApiDao {
         return parks;
     }
 
+    /**
+     * Gets distance.
+     *
+     * @param userZipcode the user zipcode
+     * @param parkZipcode the park zipcode
+     * @return the distance
+     */
     public double getDistance(int userZipcode, int parkZipcode) {
         Client client = ClientBuilder.newClient();
         WebTarget target =
@@ -45,6 +58,12 @@ public class ZipcodeApiDao {
         return distance;
     }
 
+    /**
+     * Gets parks within distance.
+     *
+     * @param userZip the user zip
+     * @return the parks within distance
+     */
     public List getParksWithinDistance(int userZip) {
         List<StatePark> allParks = getParks();
         List<StatePark> parksWithinDistance = new ArrayList<>();

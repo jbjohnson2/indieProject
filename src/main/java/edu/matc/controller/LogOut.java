@@ -1,9 +1,5 @@
 package edu.matc.controller;
 
-
-import edu.matc.entity.Review;
-import edu.matc.entity.User;
-import edu.matc.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
+
+/**
+ * a servlet to log the user out
+ */
 
 @WebServlet(
         urlPatterns = {"/logOut"}

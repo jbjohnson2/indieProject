@@ -1,7 +1,6 @@
 package edu.matc.controller;
 
-import edu.matc.entity.Review;
-import edu.matc.entity.User;
+
 import edu.matc.entity.StatePark;
 import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.ZipcodeApiDao;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
 
 
+/**
+ * a servlet to find the distance to a state park from the user's zip code and display the distance in a message
+ */
 @WebServlet(
         urlPatterns = {"/findDistance"}
 )

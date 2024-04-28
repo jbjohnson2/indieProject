@@ -19,6 +19,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * a servlet to find to set the user and the users reviews
+ */
 @WebServlet(
         urlPatterns = {"/userPage"}
 )
@@ -38,6 +41,7 @@ public class UserPage extends HttpServlet {
         String username = req.getParameter("userName");
         logger.debug("The username:" + username);
 
+        //stub for user to test userpage before connecting to aws
         List<User> userList = userDao.findByPropertyEqual("userName", username);
         logger.debug(userList);
         User user = (User) userDao.getById(userList.get(0).getId());
@@ -45,10 +49,10 @@ public class UserPage extends HttpServlet {
         req.setAttribute("User", user);
         req.setAttribute("userReviews", userReviews);
 
-
 //        logger.debug(review);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(req, resp);
     }
 
 }
+

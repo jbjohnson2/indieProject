@@ -103,7 +103,7 @@
 - [X] create a userPage jsp where users are directed to after sign in that displays their reviews
 - [X] add a display of recent reviews on the browse page
 - [ ] Update add review page so that it uses the user Id of the user who is logged in
-- [ ] Implement consuming a web service - zip code search
+- [X] Implement consuming a web service - zip code search
 - [ ] work on styling
 - [X] create a jsp for a page where users can view/edit/delete their reviews
 - [X] create a controller to perform the view/edit/delete of those reviews
@@ -112,7 +112,6 @@
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
-- [ ] Update Weekly reflection
 - [ ] Update time log
 
 ### Week 15 - 4/29 to 5/5 - Work week

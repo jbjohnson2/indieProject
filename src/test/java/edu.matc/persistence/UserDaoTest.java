@@ -132,4 +132,10 @@ class UserDaoTest {
         List<User> users = genericDao.getByPropertyLike("lastName", "c");
         assertEquals(2, users.size());
     }
+
+    @Test
+    void getPropertyLikeUnique() {
+        User user = (User) genericDao.findByPropertyEqualUnique("userName", "catRat");
+        assertEquals(genericDao.getById(1), user);
+    }
 }

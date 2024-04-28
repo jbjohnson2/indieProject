@@ -13,9 +13,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 /**
- *
- *
- * @author jcecil
+ *a servlet to edit a review
  */
 @WebServlet(
         urlPatterns = {"/editReview"}

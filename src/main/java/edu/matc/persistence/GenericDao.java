@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import edu.matc.entity.Review;
+import jakarta.persistence.Entity;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Predicate;
@@ -127,6 +128,26 @@ public class GenericDao<T> {
         return items;
     }
 
+    /**
+     * Finds entities by one of its properties.
+     * sample usage: findByPropertyEqual("lastname", "Curry")
+     *
+     * @param propertyName the property name.
+     * @param value        the value by which to find.
+     * @return the list of all entities found matching the criteria
+     */
+    public <T> T findByPropertyEqualUnique(String propertyName, Object value) {
+        Session session = getSession();
+        HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = (CriteriaQuery<T>) builder.createQuery(type);
+        Root<T> root = (Root<T>) query.from(type);
+        query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<T> items = session.createSelectionQuery(query).getResultList();
+        T entity = items.get(0);
+        session.close();
+        return entity;
+    }
+
 
     /**
      * Get review by property (like)
@@ -172,6 +193,7 @@ public class GenericDao<T> {
         session.close();
         return items;
     }
+
 
 
     /**

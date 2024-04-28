@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * The type State park.
+ * State Park Entity
  */
 @Entity
 @Table(name="state_park")

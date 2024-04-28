@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
+/**
+a servlet to get form paramaters to add a review to the database
+ */
 
 @WebServlet(
         urlPatterns = {"/addReview"}
@@ -47,7 +49,6 @@ public class AddReview extends HttpServlet {
         review.setReviewText(req.getParameter("reviewText"));
         int addedReviewID = reviewDao.insert(review);
         req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", addedReviewID));
-//        logger.debug(review);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
     }

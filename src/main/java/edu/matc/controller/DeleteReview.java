@@ -16,9 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- *
- *
- * @author jcecil
+ * servlet to delete a review
  */
 @WebServlet(
         urlPatterns = {"/deleteReview"}

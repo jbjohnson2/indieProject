@@ -16,13 +16,22 @@ import org.hibernate.query.criteria.HibernateCriteriaBuilder;
 
 import java.util.List;
 
+/**
+ * The type Review dao.
+ */
 public class ReviewDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Session factory.
+     */
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
      * Get review by id
+     *
+     * @param id the id
+     * @return the by id
      */
     public Review getById(int id) {
         Session session = sessionFactory.openSession();
@@ -33,7 +42,8 @@ public class ReviewDao {
 
     /**
      * update review
-     * @param review  Review to be updated
+     *
+     * @param review Review to be updated
      */
     public void update(Review review) {
         Session session = sessionFactory.openSession();
@@ -45,7 +55,9 @@ public class ReviewDao {
 
     /**
      * insert a new review
-     * @param review  Review to be inserted
+     *
+     * @param review Review to be inserted
+     * @return the int
      */
     public int insert(Review review) {
         int id = 0;
@@ -60,6 +72,7 @@ public class ReviewDao {
 
     /**
      * Delete a review
+     *
      * @param review Review to be deleted
      */
     public void delete(Review review) {
@@ -71,7 +84,8 @@ public class ReviewDao {
     }
 
 
-    /** Return a list of all reviews
+    /**
+     * Return a list of all reviews
      *
      * @return All reviews
      */
@@ -93,6 +107,10 @@ public class ReviewDao {
     /**
      * Get review by property (exact match)
      * sample usage: getByPropertyEqual("lastname", "Curry")
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property equal
      */
     public List<Review> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
@@ -112,6 +130,10 @@ public class ReviewDao {
     /**
      * Get review by property (like)
      * sample usage: getByPropertyLike("lastname", "C")
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property like
      */
     public List<Review> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();

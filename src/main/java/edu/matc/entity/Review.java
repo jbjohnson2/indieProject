@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import java.util.Objects;
 
 /**
- * The class to represent a  Review
+ * Review Entity
  */
 @Entity
 @Table (name="reviews")
