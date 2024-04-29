@@ -108,6 +108,7 @@
 - [X] create a jsp for a page where users can view/edit/delete their reviews
 - [X] create a controller to perform the view/edit/delete of those reviews
 - [X] Create browse jsp and controller
+- [ ] update user page so that new user has to enter zipcode
 - [ ] Add additional unit tests for more code coverage
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
