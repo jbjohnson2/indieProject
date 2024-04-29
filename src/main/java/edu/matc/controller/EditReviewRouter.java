@@ -1,6 +1,4 @@
 package edu.matc.controller;
-
-
 import edu.matc.entity.Review;
 import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
@@ -17,14 +15,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * servlet to delete a review
- */
+
 @WebServlet(
-        urlPatterns = {"/deleteReview"}
+        urlPatterns = {"/editReviewRouter"}
 )
 
-public class DeleteReview extends HttpServlet {
+public class EditReviewRouter extends HttpServlet {
+
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,16 +29,16 @@ public class DeleteReview extends HttpServlet {
         //gets form data and uses it to execute a search or get all reviews
 
 
-        GenericDao genericDao= new GenericDao(Review.class);
-        GenericDao userDao = new GenericDao(User.class);
-        Review reviewToDelete = (Review)genericDao.getById(Integer.parseInt(req.getParameter("reviewID")));
-        genericDao.delete(reviewToDelete);
+        GenericDao reviewDao= new GenericDao(Review.class);
 
-        User user = (User)userDao.getById(Integer.parseInt(req.getParameter("userId")));
+        Review reviewToEdit = (Review)reviewDao.getById(Integer.parseInt(req.getParameter("reviewID")));
 
-        List<Review> userReviews = user.getReviews();
-        req.setAttribute("userReviews", userReviews);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage");
+
+        req.setAttribute("reviewToEdit", reviewToEdit);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("editReview.jsp");
         dispatcher.forward(req, resp);
     }
+
+
+
 }

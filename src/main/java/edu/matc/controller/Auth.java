@@ -97,6 +97,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 HttpSession session = req.getSession();
                 session.setAttribute("User", user);
                 req.setAttribute("userReviews", userReviews);
+                session.setAttribute("userId", user.getId());
+                logger.debug("The user id is " + user.getId());
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page

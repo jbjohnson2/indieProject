@@ -124,7 +124,7 @@
             <textarea id="reviewText" name="reviewText" rows="4" cols="50"></textarea>
             <br>
 
-            <button type="submit" name="submit" value="add" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" value="update" class="btn btn-primary">Submit</button>
 
         </form>
     </div>

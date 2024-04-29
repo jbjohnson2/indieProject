@@ -21,6 +21,7 @@
             </div>
         </div>
         <c:forEach var="review" items="${userReviews}">
+        
 
             <div class="row">
                 <div class="item features-image col-12 col-md-6 col-lg-4 active">
@@ -29,7 +30,7 @@
                             <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
                                 <strong><a class="text-black fw-bold">${review.park}</a></strong>
                             </h6>
-                            <p class="mbr-text mbr-fonts-style mb-3 display-7">Campground: ${review.campground}  Campsite: ${recentReview1.campsite}</p>
+                            <p class="mbr-text mbr-fonts-style mb-3 display-7">Campground: ${review.campground}  Campsite: ${review.campsite}</p>
                             <p class="mbr-text mbr-fonts-style mb-3 display-7">Grades<ul>
                             <li>Shade: ${review.shade}</li>
                             <li>Size: ${review.size}</li>
@@ -38,12 +39,14 @@
                             <li>Dog Friendliness: ${review.dogFriendliness}</li>
                         </ul></p>
                             <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${review.reviewText}</div>
-                                <form action="editReview" class ="form-inline">
+                                <form action="editReviewRouter" class ="form-inline">
                                     <input type="hidden" name="reviewID" value=${review.id} />
+                                    <input type="hidden" name="userId" value=${userId} />
                                     <button type="submit" name="edit" value="edit" class="btn btn-primary">Edit Review</button>
                                 </form>
                                 <form action="deleteReview" class="form-inline">
                                     <input type="hidden" name="reviewID" value=${review.id} />
+                                    <input type="hidden" name="userId" value=${userId} />
                                     <button type="submit" name="delete" value="delete" class="btn btn-primary">Delete Review</button>
                                 </form>
                         </div>
@@ -106,6 +109,7 @@
                                 <option value=35>Wyalusing</option>
                                 <option value=36>Yellowstone Lake</option>
                             </select>
+                          </div>
                         <input type="hidden" name="userZipcode" value=${User.zipcode} />
                         <button type="submit" name="edit" value="edit" class="btn btn-primary">Find Distance</button>
                     </form>

@@ -12,15 +12,14 @@
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
     <div class="container-fluid col-12 col-md-4" style="background-color: blanchedalmond">
-        <form action="editReviewAction">
-            <h2>Edit Review Your Review</h2>
-            <div class="form-group">
-                <label for="userID">User:</label>
-                <input type="text" id="userID" name="userID">
-            </div>
+        <form action="editReview">
+            <h2>Edit Your Review</h2>
+            <input type="hidden" name="userId" value=${userId} />
+            <input type="hidden" name="reviewId" value=${reviewToEdit.id} />
             <div class="form-group">
                 <label for="park">Select Park:</label>
-                <select  id="park" name="park" defaultValue="${review.park}">
+                <select  id="park" name="park">
+                    <option value="${reviewToEdit.park}">${reviewToEdit.park}</option>
                     <option value="Amnicon Falls">Amnicon Falls</option>
                     <option value="Big Bay">Big Bay</option>
                     <option value="Big Foot Beach">Big Foot Beach</option>
@@ -64,15 +63,16 @@
             </div>
             <div class="form-group">
                 <label for="campground">Campground:</label>
-                <input type="text" id="campground" name="campground" value="${review.campground}">
+                <input type="text" id="campground" name="campground" value="${reviewToEdit.campground}">
             </div>
             <div class="form-group">
                 <label for="campsite">Campsite:</label>
-                <input type="text" id="campsite" name="campsite" value=${review.campsite}>
+                <input type="text" id="campsite" name="campsite" value=${reviewToEdit.campsite}>
             </div>
             <div class="form-group">
                 <label for="shade">Shade:</label>
-                <select defaultValue="${review.shade}" id="shade" name="shade" >
+                <select id="shade" name="shade" >
+                    <option value="${reviewToEdit.shade}">${reviewToEdit.shade}</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -83,6 +83,7 @@
             <div class="form-group">
                 <label for="size">Size:</label>
                 <select id="size" name="size">
+                    <option value="${reviewToEdit.size}">${reviewToEdit.size}</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -93,6 +94,7 @@
             <div class="form-group">
                 <label for="bathroomAccess">Restroom Access:</label>
                 <select id="bathroomAccess" name="bathroomAccess">
+                    <option value="${reviewToEdit.bathroomAccess}">${reviewToEdit.bathroomAccess}</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -103,6 +105,7 @@
             <div class="form-group">
                 <label for="kidFriendliness">Kid Friendliness:</label>
                 <select id="kidFriendliness" name="kidFriendliness">
+                    <option value="${reviewToEdit.kidFriendliness}">${reviewToEdit.kidFriendliness}</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -113,6 +116,7 @@
             <div class="form-group">
                 <label for="dogFriendliness">Dog Friendliness:</label>
                 <select id="dogFriendliness" name="dogFriendliness">
+                    <option value="${reviewToEdit.dogFriendliness}" selected>${reviewToEdit.dogFriendliness}</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -121,10 +125,10 @@
                 </select>
             </div>
             <p><label for="reviewText">Review:</label></p>
-            <textarea id="reviewText" name="reviewText" rows="4" cols="50"></textarea>
+            <textarea id="reviewText" name="reviewText" rows="4" cols="50" value="${reviewToEdit.reviewText}"></textarea>
             <br>
 
-            <button type="submit" name="submit" value="add" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-primary">Update</button>
 
         </form>
     </div>
