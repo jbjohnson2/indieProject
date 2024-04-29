@@ -10,8 +10,10 @@
 <%@include file="head.jsp"%>
 <%@include file="nav.jsp"%>
 <head>
-    <title>Join</title>
+    <title>Create an Account</title>
 </head>
+
+
 <body>
 
 </body>

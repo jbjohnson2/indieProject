@@ -45,6 +45,32 @@ public class User {
     /**
      * Instantiates a new User.
      *
+     * @param userName     the user name
+     * @param emailAddress the email address
+     */
+    public User(String userName, String emailAddress) {
+        this.userName = userName;
+        this.emailAddress = emailAddress;
+    }
+
+    /**
+     * Instantiates a new User.
+     *
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param userName     the user name
+     * @param emailAddress the email address
+     */
+    public User(String firstName, String lastName, String userName, String emailAddress) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.emailAddress = emailAddress;
+    }
+
+    /**
+     * Instantiates a new User.
+     *
      * @param firstName    the first name
      * @param lastName     the last name
      * @param userName     the user name

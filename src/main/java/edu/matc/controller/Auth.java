@@ -7,6 +7,9 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.auth.*;
+import edu.matc.entity.Review;
+import edu.matc.entity.User;
+import edu.matc.persistence.GenericDao;
 import edu.matc.util.PropertiesLoader;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +21,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -36,6 +40,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
@@ -78,31 +83,29 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
-        String userName = null;
-        logger.debug("doget");
+        User user = null;
+        GenericDao userDao = new GenericDao<>(User.class);
+
         if (authCode == null) {
-            req.setAttribute("errorMessage", ("Auth Code is null"));
-            RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
-            dispatcher.forward(req, resp);
+            //TODO forward to an error page or back to the login
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                userName = validate(tokenResponse);
-                req.setAttribute("userName", userName);
+                user = validate(tokenResponse);
+                List<Review> userReviews = user.getReviews();
+                HttpSession session = req.getSession();
+                session.setAttribute("User", user);
+                req.setAttribute("userReviews", userReviews);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                req.setAttribute("errorMessage", "Error getting or validating the token: ");
-                RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
-                dispatcher.forward(req, resp);
+                //TODO forward to an error page
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                req.setAttribute("errorMessage","Error getting token from Cognito oauth url " );
-                RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
-                dispatcher.forward(req, resp);
+                //TODO forward to an error page
             }
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher("userPage");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(req, resp);
 
     }
@@ -139,7 +142,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return
      * @throws IOException
      */
-    private String validate(TokenResponse tokenResponse) throws IOException {
+    private User validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(CognitoJWTParser.getHeader(tokenResponse.getIdToken()).toString(), CognitoTokenHeader.class);
 
@@ -176,15 +179,30 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
+
         String userName = jwt.getClaim("cognito:username").asString();
-        logger.debug("here's the username: " + userName);
+        String email = jwt.getClaim("email").asString();
+        logger.debug("here's the username: " + userName );
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+
+        List<User> userList = userDao.findByPropertyEqual("userName", userName);
+        User user = null;
+        if (userList.isEmpty()) {
+            user = new User();
+            user.setUserName(jwt.getClaim("cognito:username").asString());
+            user.setEmailAddress(jwt.getClaim("email").asString());
+            logger.debug(user);
+            userDao.insert(user);
+        } else {
+            user = (User) userDao.getById(userList.get(0).getId());
+        }
 
         // TODO decide what you want to do with the info!
         // for now, I'm just returning username for display back to the browser
 
-        return userName;
+        return user;
     }
 
     /** Create the auth url and use it to build the request.
