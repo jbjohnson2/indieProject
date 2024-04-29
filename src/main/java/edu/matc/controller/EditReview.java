@@ -48,6 +48,7 @@ public class EditReview extends HttpServlet {
         reviewToEdit.setDogFriendliness(req.getParameter("dogFriendliness"));
         reviewToEdit.setReviewText(req.getParameter("reviewText"));
         reviewDao.update(reviewToEdit);
+        req.setAttribute("userReviews", user.getReviews());
         req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", reviewToEdit.getId()));
         req.setAttribute("tableHeader", "Review Updated");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
