@@ -24,7 +24,7 @@
         <div class="row">
             <div class="content-wrap col-12 col-md-11" style= "background-color: white">
                 <div class="container-fluid">
-                    <h2>Search Results: </h2>
+                    <h2>${tableHeader}: </h2>
                     <table id="userTable" class="display" cellspacing="0" width="100%">
                         <thead>
                         <th>Park</th>

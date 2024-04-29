@@ -33,7 +33,7 @@ public class SearchReview extends HttpServlet {
         } else {
             req.setAttribute("reviews", reviewDao.getAll());
         }
-
+        req.setAttribute("tableHeader", "Search Results");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
     }

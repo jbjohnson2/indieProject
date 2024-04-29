@@ -49,6 +49,7 @@ public class AddReview extends HttpServlet {
         review.setReviewText(req.getParameter("reviewText"));
         int addedReviewID = reviewDao.insert(review);
         req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", addedReviewID));
+        req.setAttribute("tableHeader", "Review Added");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
     }

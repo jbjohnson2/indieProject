@@ -65,6 +65,19 @@ public class GenericDao<T> {
     }
 
     /**
+     * Gets an entity by username
+     *
+     * @param id entity id to search by
+     * @return entity
+     */
+    public <T> T getById(String id) {
+        Session session = getSession();
+        T entity = (T) session.get(type, id);
+        session.close();
+        return entity;
+    }
+
+    /**
      * Deletes the entity.
      *
      * @param entity entity to be deleted

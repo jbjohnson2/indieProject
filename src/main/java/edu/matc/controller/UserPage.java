@@ -28,25 +28,23 @@ public class UserPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-        //gets form data and uses it to execute a search or get all reviews
-        GenericDao userDao = new GenericDao(User.class);
-
-        String username = req.getParameter("userName");
-        logger.debug("The username:" + username);
-
-        //stub for user to test userpage before connecting to aws
-        List<User> userList = userDao.findByPropertyEqual("userName", username);
-        if (userList.isEmpty()) {
-            req.setAttribute("loginError", "User not found");
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(req, resp);
-        } else {
-            logger.debug(userList);
-            User user = (User) userDao.getById(userList.get(0).getId());
-            List<Review> userReviews = user.getReviews();
-            req.setAttribute("User", user);
-            req.setAttribute("userReviews", userReviews);
+//
+//        //gets form data and uses it to execute a search or get all reviews
+//           GenericDao userDao = new GenericDao(User.class);
+//
+//        logger.debug(req.getParameter("userName"));
+//        String userName = req.getParameter("userName");
+//        logger.debug("The username:" + userName);
+//
+//        //stub for user to test userpage before connecting to aws
+//        if (userList.isEmpty()) {
+//            req.setAttribute("loginError", "User not found");
+//            RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
+//            dispatcher.forward(req, resp);
+//        } else {
+//            logger.debug(userList);
+//            req.setAttribute("User", user);
+//            req.setAttribute("userReviews", userReviews);
 
 //        logger.debug(review);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
@@ -54,4 +52,3 @@ public class UserPage extends HttpServlet {
         }
     }
 
-}
