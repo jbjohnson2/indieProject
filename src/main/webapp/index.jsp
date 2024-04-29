@@ -7,8 +7,8 @@
 
 <%@include file="nav.jsp"%>
 
-
-
+<h3>${loginError}</h3>
+<c:remove var="loginError" ></c:remove>
 
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
   <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
@@ -62,17 +62,12 @@
     </div>
 </section>
 
-<section class="image02 cid-u7iIcWYAk3 mbr-fullscreen mbr-parallax-background" id="image-13-u7iIcWYAk3">
-    <div class="container">
-        <div class="row"></div>
-    </div>
-</section>
+
 
 <%--<%@include file="faq.jsp"%>--%>
 <%--<%@include file="gallery.jsp"%>--%>
 
 
-<%@include file="signup.jsp"%>
 
 
 

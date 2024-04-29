@@ -119,6 +119,7 @@ public class GenericDao<T> {
      */
     public List<T> findByPropertyEqual(String propertyName, Object value) {
         Session session = getSession();
+        logger.debug("Searching for review with {} = {}",  propertyName, value);
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);

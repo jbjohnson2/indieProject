@@ -79,9 +79,11 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
         String userName = null;
-    logger.debug(userName);
+        logger.debug("doget");
         if (authCode == null) {
-            //TODO forward to an error page or back to the login
+            req.setAttribute("errorMessage", ("Auth Code is null"));
+            RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
+            dispatcher.forward(req, resp);
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
@@ -90,13 +92,16 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 req.setAttribute("userName", userName);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                //TODO forward to an error page
+                req.setAttribute("errorMessage", "Error getting or validating the token: ");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
+                dispatcher.forward(req, resp);
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                //TODO forward to an error page
+                req.setAttribute("errorMessage","Error getting token from Cognito oauth url " );
+                RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
+                dispatcher.forward(req, resp);
             }
         }
-        logger.debug(userName);
         RequestDispatcher dispatcher = req.getRequestDispatcher("userPage");
         dispatcher.forward(req, resp);
 

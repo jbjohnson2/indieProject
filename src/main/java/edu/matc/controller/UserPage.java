@@ -19,9 +19,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * a servlet to find to set the user and the users reviews
- */
 @WebServlet(
         urlPatterns = {"/userPage"}
 )
@@ -33,26 +30,28 @@ public class UserPage extends HttpServlet {
 
 
         //gets form data and uses it to execute a search or get all reviews
-        GenericDao reviewDao = new GenericDao(Review.class);
         GenericDao userDao = new GenericDao(User.class);
 
-
-        Review review = new Review();
         String username = req.getParameter("userName");
         logger.debug("The username:" + username);
 
         //stub for user to test userpage before connecting to aws
         List<User> userList = userDao.findByPropertyEqual("userName", username);
-        logger.debug(userList);
-        User user = (User) userDao.getById(userList.get(0).getId());
-        List<Review> userReviews = user.getReviews();
-        req.setAttribute("User", user);
-        req.setAttribute("userReviews", userReviews);
+        if (userList.isEmpty()) {
+            req.setAttribute("loginError", "User not found");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(req, resp);
+        } else {
+            logger.debug(userList);
+            User user = (User) userDao.getById(userList.get(0).getId());
+            List<Review> userReviews = user.getReviews();
+            req.setAttribute("User", user);
+            req.setAttribute("userReviews", userReviews);
 
 //        logger.debug(review);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
-        dispatcher.forward(req, resp);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
+            dispatcher.forward(req, resp);
+        }
     }
 
 }
-
