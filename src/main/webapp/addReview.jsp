@@ -16,7 +16,7 @@
             <h2>Add Your Review</h2>
             <div class="form-group">
                 <label for="userID">User:</label>
-                <input type="text" id="userID" name="userID">
+                <input type="text" id="userID" name="userID" value="${userId}">
             </div>
             <div class="form-group">
                 <label for="park">Select Park:</label>

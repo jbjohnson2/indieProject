@@ -102,20 +102,24 @@
 
 - [X] create a userPage jsp where users are directed to after sign in that displays their reviews
 - [X] add a display of recent reviews on the browse page
-- [ ] Update add review page so that it uses the user Id of the user who is logged in
+- [x] Update add review page so that it uses the user Id of the user who is logged in
 - [X] Implement consuming a web service - zip code search
-- [ ] work on styling
 - [X] create a jsp for a page where users can view/edit/delete their reviews
 - [X] create a controller to perform the view/edit/delete of those reviews
 - [X] Create browse jsp and controller
 - [ ] update user page so that new user has to enter zipcode
-- [ ] Add additional unit tests for more code coverage
+- [X] Update time log
+
+### Week 15 - 4/29 to 5/5 - Work week
+- [ ] add error page
+- [ ] Work on navbar when user is logged it
+- [ ] work on styling so that content sits under navbar
+- [ ] moved find distance to a separate page
+- [ ] work on styling
+- [ ] see if more tests are needed
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
-- [ ] Update time log
-
-### Week 15 - 4/29 to 5/5 - Work week
 - [ ] Final Presentation
 - [ ] Create video, add video link to readme.md
 - [ ] Finalize all documentation

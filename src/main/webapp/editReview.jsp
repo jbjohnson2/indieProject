@@ -125,10 +125,10 @@
                 </select>
             </div>
             <p><label for="reviewText">Review:</label></p>
-            <textarea id="reviewText" name="reviewText" rows="4" cols="50" value="${reviewToEdit.reviewText}"></textarea>
+            <textarea id="reviewText" name="reviewText" rows="4" cols="50">${reviewToEdit.reviewText}</textarea>
             <br>
 
-            <button type="submit" name="submit" value="submit" class="btn btn-primary">Update</button>
+            <button type="submit" name="submit" value="add" class="btn btn-primary">Update</button>
 
         </form>
     </div>

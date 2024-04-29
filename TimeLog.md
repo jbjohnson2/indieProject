@@ -82,7 +82,7 @@
 | 04/27/24 | Update project to work with aws, add test service client, make sure browse page worked with logged in user, add state park entity | 3     |       |
 | 04/28/24 | Consume a web service, figure out why cognito stopped working                                                                     | 3     |       |
 | 04/28/24 | Cognito issues, add new user to the database                                                                                      | 3     |       |
-|          |                                                                                                                                   |       |       |
+| 04/29/24 | Get  delete/redirects userpage working and add edit capability                                                                    | 2     |       |
 |          |                                                                                                                                   |       |       |
 |          |                                                                                                                                   |       |       |
 |          |                                                                                                                                   |       |       |
