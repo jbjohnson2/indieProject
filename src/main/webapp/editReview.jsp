@@ -1,11 +1,11 @@
 <%@include file="taglib.jsp"%>
 <!DOCTYPE html>
 <html>
-<%@include file="head.jsp"%>
+<c:import url="head.jsp" />
 
 
 
-<%@include file="nav.jsp"%>
+<c:import url="nav.jsp" />
 <body>
 
 
@@ -142,5 +142,5 @@
 
 
 </body>
-<%@include file="footer.jsp"%>
+<c:import url="footer.jsp" />
 </html>

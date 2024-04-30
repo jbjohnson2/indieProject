@@ -1,6 +1,6 @@
-<%@include file="head.jsp"%>
 <%@include file="taglib.jsp"%>
 <html>
+<c:import url="head.jsp" />
 <body>
 <c:choose>
     <c:when test="${empty userName}">

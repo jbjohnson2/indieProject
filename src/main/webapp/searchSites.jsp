@@ -1,9 +1,10 @@
+<%@include file="taglib.jsp"%>
 <html>
-<%@include file="head.jsp"%>
 
 
-
-<%@include file="nav.jsp"%>
+<c:import url="head.jsp" />
+<body>
+<c:import url="nav.jsp" />
 
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
@@ -33,5 +34,5 @@
     </div>
 </section>
 </body>
-<%@include file="footer.jsp"%>
+<c:import url="footer.jsp" />
 </html>

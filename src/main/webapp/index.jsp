@@ -1,14 +1,11 @@
 <%@include file="taglib.jsp"%>
 <!DOCTYPE html>
 <html>
-<%@include file="head.jsp"%>
+<c:import url="head.jsp" />
 <body>
 
+<c:import url="nav.jsp" />
 
-<%@include file="nav.jsp"%>
-
-<h3>${loginError}</h3>
-<c:remove var="loginError" ></c:remove>
 
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
   <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
@@ -36,9 +33,8 @@
 
 
 
-
-<%@include file="footer.jsp"%>
-<%@include file="scripts.jsp"%>
+<c:import url="footer.jsp" />
+<c:import url="scripts.jsp" />
 
 
 

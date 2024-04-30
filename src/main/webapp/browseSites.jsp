@@ -1,18 +1,18 @@
 <%@include file="taglib.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@include file="head.jsp"%>
+<c:import url="head.jsp" />
 <script type="text/javascript" class="init">
     $(document).ready( function () {
         $('#userTable').DataTable();
     } );
 </script>
-<%@include file="nav.jsp"%>
+<c:import url="nav.jsp" />
 <head>
     <title>Browse Sites</title>
 </head>
 <body>
-<%@include file="recentReviews.jsp"%>
+<c:import url="recentReviews.jsp" />
 <section >
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
     <div class="container-fluid">
@@ -56,5 +56,5 @@
 </section>
 
 </body>
-<%@include file="footer.jsp"%>
+<c:import url="footer.jsp" />
 </html>

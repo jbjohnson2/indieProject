@@ -2,12 +2,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
-<%@include file="head.jsp"%>
-<%@include file="navLoggedIn.jsp"%>
+<c:import url="head.jsp" />
+
 <head>
     <title>User Page</title>
 </head>
 <body>
+<c:import url="navLoggedIn.jsp" />
 <section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo">
     <div class="container-fluid">
 
@@ -72,7 +73,7 @@
                     <form action="findDistance" class ="form-inline">
                         <div class="form-group">
                         <label for="userZipcode">Your zipcode:</label>
-                        <input type="text" id="userZipcode" name="userZipcode" value=${User.zipcode} />
+                        <input type="text" id="userZipcode" name="userZipcode" value="${User.zipcode}" />
                         </div>
                         <div class="form-group">
                             <label for="park">Select Park:</label>
@@ -116,7 +117,7 @@
                             </select>
                           </div>
                         <br />
-                        <input type="hidden" name="userZipcode" value=${User.zipcode} />
+
                         <button type="submit" name="edit" value="edit" class="btn btn-primary">Find Distance</button>
                     </form>
 
@@ -145,7 +146,7 @@
                               </div>
 
                               <br>
-                              <input type="hidden" name="userId" value=${User.id} />
+                              <input type="hidden" name="userId" value="${User.id}" />
                               <br>
                               <button type="submit" name="edit" value="edit" class="btn btn-primary">Add Zipcode to Profile</button>
                           </form>
@@ -159,6 +160,6 @@
     </div>
 </section>
 </body>
-<%@include file="footer.jsp"%>
+<c:import url="footer.jsp" />
 
 </html>

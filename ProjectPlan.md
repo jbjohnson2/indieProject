@@ -115,7 +115,6 @@
 - [ ] Work on navbar when user is logged it
 - [ ] work on styling so that content sits under navbar
 - [ ] moved find distance to a separate page
-- [ ] work on styling
 - [ ] see if more tests are needed
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
