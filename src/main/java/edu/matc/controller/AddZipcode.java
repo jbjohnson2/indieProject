@@ -37,7 +37,7 @@ public class AddZipcode extends HttpServlet {
         userDao.update(user);
         req.setAttribute("userReviews", user.getReviews());
         req.setAttribute("User", user);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/distanceSearch.jsp");
         dispatcher.forward(req, resp);
     }
 }
