@@ -1,3 +1,4 @@
+<header></header>
 <section class="menu menu2 cid-u7iIcWX3D5" once="menu" id="menu-5-u7iIcWX3D5">
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
@@ -29,9 +30,12 @@
                         <a class="nav-link link text-black display-4" href="browseSites">Browse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="searchSites.jsp"
-                           aria-expanded="false">Search</a>
+                        <a class="nav-link link text-black display-4" href="searchSites.jsp">Search</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-black display-4" href="distanceSearch.jsp">Find Distance</a>
+                    </li>
+                    <li class="nav-item">
                     <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="addReview.jsp">Review</a>
                     </li>
@@ -46,3 +50,4 @@
         </div>
     </nav>
 </section>
+</header>

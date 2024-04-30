@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="navLoggedIn.jsp" />
-<section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo">
+<section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo" style="padding-top: 100px; padding-left:30px" >
     <div class="container-fluid">
 
         <div class="row justify-content-center mb-5">
