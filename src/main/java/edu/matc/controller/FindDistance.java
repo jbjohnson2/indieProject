@@ -39,7 +39,7 @@ public class FindDistance extends HttpServlet {
 
         req.setAttribute("distance", distance);
         req.setAttribute("message", ("The distance to " + statePark.getParkName() + " is " + distance + " miles."));
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/distanceSearch.jsp");
         dispatcher.forward(req, resp);
     }
 }

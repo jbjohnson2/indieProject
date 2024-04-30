@@ -10,7 +10,7 @@
     </c:otherwise>
 </c:choose>
 
-<section style="padding-top: 90px">
+<section style="padding-top: 100px; padding-left: 100px">
 <div class="row">
     <div class="item features-image col-12 col-md-6 col-lg-4 active">
         <div class="item-wrapper">
@@ -81,34 +81,41 @@
     </div>
     <br>
     <br>
-    <div class="item features-image col-12 col-md-6 col-lg-4 active">
-        <div class="item-wrapper">
-            <h3> ${message}</h3>
-            <c:remove var="message" ></c:remove>
-            <h4 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
-                <strong>Add your zipcode</strong>
-            </h4>
-            <br>
-            <div class="item-content align-left">
+    <c:choose>
+    <c:when test="${empty User}">
+
+    </c:when>
+    <c:otherwise>
+        <div class="item features-image col-12 col-md-6 col-lg-4 active">
+            <div class="item-wrapper">
+                <h3> ${message}</h3>
+                <c:remove var="message" ></c:remove>
+                <h4 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
+                    <strong>Add your zipcode</strong>
+                </h4>
+                <br>
+                <div class="item-content align-left">
 
 
-                <form action="addZipcode" class ="form-inline">
-                    <div class="form-group">
-                        <label for="userZip">Your zipcode:</label>
-                        <input type="text" id="userZip" name="userZip" />
-                    </div>
+                    <form action="addZipcode" class ="form-inline">
+                        <div class="form-group">
+                            <label for="userZip">Your zipcode:</label>
+                            <input type="text" id="userZip" name="userZip" />
+                        </div>
 
-                    <br>
-                    <input type="hidden" name="userId" value="${User.id}" />
-                    <br>
-                    <button type="submit" name="edit" value="edit" class="btn btn-primary">Add Zipcode to Profile</button>
-                </form>
+                        <br>
+                        <input type="hidden" name="userId" value="${User.id}" />
+                        <br>
+                        <button type="submit" name="edit" value="edit" class="btn btn-primary">Add Zipcode to Profile</button>
+                    </form>
+
+                </div>
+
 
             </div>
-
-
         </div>
-    </div>
+    </c:otherwise>
+    </c:choose>
 </div>
 </div>
 </section>
