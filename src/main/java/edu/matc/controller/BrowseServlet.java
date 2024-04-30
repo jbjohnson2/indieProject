@@ -20,7 +20,7 @@ import java.util.List;
         urlPatterns = {"/browseSites"}
 )
 
-public class browseServlet extends HttpServlet {
+public class BrowseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //gets form data and uses it to execute a search or get all reviews

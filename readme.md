@@ -18,16 +18,15 @@ The goal of my project would be to provide a centralized place  where people can
 * Dependency Management
     * Maven
 * Web Services consumed using Java
-    * TBD
+    * zipcodeapi
 * CSS
-    * TBD
+    * template created with mobirise
 * Data Validation
     * TBD
 * Logging
     * Log4J2
 * Hosting
     * AWS
-* Project Lombok
 * Unit Testing
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA

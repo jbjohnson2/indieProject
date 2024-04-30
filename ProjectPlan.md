@@ -111,6 +111,7 @@
 - [X] Update time log
 
 ### Week 15 - 4/29 to 5/5 - Work week
+- [ ] generate new mock data with fewer nulls
 - [ ] add error page
 - [ ] Work on navbar when user is logged it
 - [ ] work on styling so that content sits under navbar
