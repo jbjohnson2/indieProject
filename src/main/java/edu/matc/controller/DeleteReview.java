@@ -41,7 +41,7 @@ public class DeleteReview extends HttpServlet {
 
         List<Review> userReviews = user.getReviews();
         req.setAttribute("userReviews", userReviews);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(req, resp);
     }
 }

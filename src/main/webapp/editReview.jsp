@@ -3,9 +3,15 @@
 <html>
 <c:import url="head.jsp" />
 
+<c:choose>
+    <c:when test="${empty User}">
+        <c:import url="nav.jsp" />
+    </c:when>
+    <c:otherwise>
+        <c:import url="navLoggedIn.jsp" />
+    </c:otherwise>
+</c:choose>
 
-
-<c:import url="nav.jsp" />
 <body>
 
 

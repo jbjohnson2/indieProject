@@ -31,7 +31,11 @@ public class UserPage extends HttpServlet {
 //
 //        //gets form data and uses it to execute a search or get all reviews
            GenericDao userDao = new GenericDao(User.class);
-//
+        HttpSession session = req.getSession();
+        User user = (User) session.getAttribute("User");
+
+        List<Review> userReviews = user.getReviews();
+
 //        logger.debug(req.getParameter("userName"));
 //        String userName = req.getParameter("userName");
 //        logger.debug("The username:" + userName);
@@ -47,7 +51,7 @@ public class UserPage extends HttpServlet {
 //        User user =
 //        List<Review> userReviews = user.getReviews();
 //
-//        req.setAttribute("userReviews", userReviews);
+        req.setAttribute("userReviews", userReviews);
 
 //        logger.debug(review);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
