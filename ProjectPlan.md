@@ -114,8 +114,8 @@
 - [ ] generate new mock data with fewer nulls
 - [ ] add error page
 - [ ] Work on navbar when user is logged it
-- [ ] work on styling so that content sits under navbar
-- [ ] moved find distance to a separate page
+- [X] work on styling so that content sits under navbar
+- [X] moved find distance to a separate page
 - [ ] see if more tests are needed
 - [ ] look over rubric to ensure project meets all requirements
 - [ ] clean up code
