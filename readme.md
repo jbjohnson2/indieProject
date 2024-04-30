@@ -38,11 +38,20 @@ The goal of my project would be to provide a centralized place  where people can
     * Hibernate search
 
 
+
+### Version 2 tasks
+* Improve Styling
+* move all style tags our of jsps
+* Add campground table
+* Add campsite table
+* update Cognito log in so that zipcode is required to create an account
+* update Auth to get all user info from the login, not just the username and email
+
 #### [User Stories](DesignDocuments/UserStories.md)
 #### [Screen Design](DesignDocuments/Screens.md)
 
 
 #### [Project Plan](ProjectPlan.md)
 
-#### [Weekly Refelection](WeeklyReflection.md)
+
 #### [TimeLog](TimeLog.md)

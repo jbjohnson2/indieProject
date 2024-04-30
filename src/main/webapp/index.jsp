@@ -23,16 +23,6 @@
 </section>
 
 
-
-
-<%--<%@include file="faq.jsp"%>--%>
-<%--<%@include file="gallery.jsp"%>--%>
-
-
-
-
-
-
 <c:import url="footer.jsp" />
 <c:import url="scripts.jsp" />
 
