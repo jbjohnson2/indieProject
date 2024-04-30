@@ -98,6 +98,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 session.setAttribute("User", user);
                 req.setAttribute("userReviews", userReviews);
                 session.setAttribute("userId", user.getId());
+                session.setAttribute("userName", user.getUserName());
                 logger.debug("The user id is " + user.getId());
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
@@ -107,7 +108,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
 
     }

@@ -1,7 +1,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="head.jsp" />
 <body>
-<c:import url="nav.jsp" />
+<c:choose>
+    <c:when test="${empty User}">
+        <c:import url="nav.jsp" />
+    </c:when>
+    <c:otherwise>
+        <c:import url="navLoggedIn.jsp" />
+    </c:otherwise>
+</c:choose>
+
 <section style="padding-top: 90px">
 <div class="row">
     <div class="item features-image col-12 col-md-6 col-lg-4 active">

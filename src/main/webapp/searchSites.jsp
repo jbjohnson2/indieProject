@@ -4,7 +4,15 @@
 
 <c:import url="head.jsp" />
 <body>
-<c:import url="nav.jsp" />
+<c:choose>
+    <c:when test="${empty User}">
+        <c:import url="nav.jsp" />
+    </c:when>
+    <c:otherwise>
+        <c:import url="navLoggedIn.jsp" />
+    </c:otherwise>
+</c:choose>
+
 
 <section class="header16 cid-u7iIcWYjMC mbr-fullscreen mbr-parallax-background" id="hero-17-u7iIcWYjMC">
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>

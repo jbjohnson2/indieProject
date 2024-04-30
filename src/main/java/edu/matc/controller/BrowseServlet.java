@@ -25,6 +25,7 @@ public class BrowseServlet extends HttpServlet {
 
         //gets form data and uses it to execute a search or get all reviews
         GenericDao genericDao = new GenericDao(Review.class);
+
         List<Review> reviews = genericDao.getAll();
         int numberOfReviews = reviews.size();
 
