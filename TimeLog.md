@@ -83,7 +83,7 @@
 | 04/28/24 | Consume a web service, figure out why cognito stopped working                                                                     | 3     |       |
 | 04/28/24 | Cognito issues, add new user to the database                                                                                      | 3     |       |
 | 04/29/24 | Get  delete/redirects userpage working and add edit capability                                                                    | 2     |       |
-|          |                                                                                                                                   |       |       |
+| 04/29/24 | Add addzip to userpage, update search for distance                                                                                | 2     |       |
 |          |                                                                                                                                   |       |       |
 |          |                                                                                                                                   |       |       |
 |          |                                                                                                                                   |       |       |
