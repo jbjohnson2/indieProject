@@ -65,10 +65,15 @@
                 <h4 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
                     <strong>Find the distance to a park</strong>
                 </h4>
-                <div class="item-content align-right">
+                <br>
+                <div class="item-content align-left">
 
 
                     <form action="findDistance" class ="form-inline">
+                        <div class="form-group">
+                        <label for="userZipcode">Your zipcode:</label>
+                        <input type="text" id="userZipcode" name="userZipcode" value=${User.zipcode} />
+                        </div>
                         <div class="form-group">
                             <label for="park">Select Park:</label>
                             <select id="park" name="park">
@@ -110,6 +115,7 @@
                                 <option value=36>Yellowstone Lake</option>
                             </select>
                           </div>
+                        <br />
                         <input type="hidden" name="userZipcode" value=${User.zipcode} />
                         <button type="submit" name="edit" value="edit" class="btn btn-primary">Find Distance</button>
                     </form>
