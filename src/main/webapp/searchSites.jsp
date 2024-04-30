@@ -11,13 +11,15 @@
     <div class="container-fluid">
         <div class="row">
             <div class="content-wrap col-12 col-md-10">
-
+                <h2 style="color:white">Search for a Review</h2>
+                <br>
                 <form action="searchReview" class="form-inline">
                     <div class="=form-group">
                         <label for="parkName">Search</label>
                         <input type="text" class="form-control" id="parkName" name="parkName" aria-describedby="searchTermHelp"
                                placeholder="Enter park name">
                     </div>
+
                     <button type="submit" name="submit" value="searchByPark" class="btn btn-primary">Search by Park</button>
 
                     <div class="=form-group">
@@ -25,9 +27,10 @@
                         <input type="text" class="form-control" id="keyword" name="keyword" aria-describedby="searchTermHelp"
                                placeholder="Enter keyword">
                     </div>
-                    <button type="submit" name="submit" value="searchByKeyword" class="btn btn-primary">Search by Keyword</button>
-
+                        <button type="submit" name="submit" value="searchByKeyword" class="btn btn-primary">Search by Keyword</button>
+                    <div>
                     <button type="submit" name="submit" value="viewAll" class="btn btn-primary">View All Reviews</button>
+                     </div>
                 </form>
             </div>
         </div>

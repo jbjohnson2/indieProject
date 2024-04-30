@@ -1,7 +1,7 @@
 <%@include file="taglib.jsp"%>
 
 
-<section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo">
+<section class="features03 cid-u7iIcWYVVo" id="news-1-u7iIcWYVVo" style="padding-top: 100px">
     <div class="container-fluid">
         <div class="row justify-content-center mb-5">
             <div class="col-12 content-head">

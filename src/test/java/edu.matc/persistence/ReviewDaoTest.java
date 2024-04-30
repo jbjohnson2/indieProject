@@ -67,8 +67,8 @@ class ReviewDaoTest {
     @Test
     void insert() {
 
-        UserDao userDao = new UserDao();
-        User user = userDao.getById(3);
+        GenericDao userDao = new GenericDao(User.class);
+        User user = (User) userDao.getById(3);
 
         Review reviewToInsert= new Review("Mirror Lake", "CliffWood", "89", "A",
                     "B", "C", "D", "F", "cool", user);

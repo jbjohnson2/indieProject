@@ -98,7 +98,7 @@ class UserDaoTest {
         assertNull(genericDao.getById(1));
 
         //verify that the orders were also deleted
-        ReviewDao reviewDao = new ReviewDao();
+        GenericDao reviewDao = new GenericDao(Review.class);
         assertNull(reviewDao.getById(reviewNumber1));
         assertNull(reviewDao.getById(reviewNumber2));
     }

@@ -1,7 +1,7 @@
 package edu.matc.controller;
 
-
-import edu.matc.persistence.ReviewDao;
+import edu.matc.entity.Review;
+import edu.matc.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,9 +25,9 @@ public class SearchReview extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //gets form data and uses it to execute a search or get all reviews
-        ReviewDao reviewDao = new ReviewDao();//        UserData userData = new UserData();
+        GenericDao reviewDao = new GenericDao(Review.class);
         if (req.getParameter("submit").equals("searchByPark")) {
-            req.setAttribute("reviews", reviewDao.getByPropertyEqual("park", req.getParameter("parkName")));
+            req.setAttribute("reviews", reviewDao.findByPropertyEqual("park", req.getParameter("parkName")));
         } else if(req.getParameter("submit").equals("searchByKeyword")) {
             req.setAttribute("reviews", reviewDao.getByPropertyLike("reviewText", req.getParameter("keyword")));
         } else {
