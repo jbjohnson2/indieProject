@@ -7,7 +7,7 @@ As a camper, I want to be able to view campsite reviews so that I can choose one
 As a new user, I want to be able to create and account so that I can add my campsite reviews.
 
 ### Sign In
-As a user, I want to be able to sign into my account so that I can create a review.
+As a user, I want to be able to sign in to my account so that I can create a review.
 
 ### Create Review
 As a user, I want to be able to create a review, so that I can share my experiences with others.

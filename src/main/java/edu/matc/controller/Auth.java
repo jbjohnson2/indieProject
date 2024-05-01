@@ -52,9 +52,10 @@ import java.util.stream.Collectors;
         urlPatterns = {"/auth"}
 )
 // TODO if something goes wrong it this process, route to an error page. Currently, errors are only caught and logged.
-/**
- *
- * Inspired by: https://stackoverflow.com/questions/52144721/how-to-get-access-token-using-client-credentials-using-java-code
+/*
+
+
+  Inspired by: https://stackoverflow.com/questions/52144721/how-to-get-access-token-using-client-credentials-using-java-code
  */
 
 public class Auth extends HttpServlet implements PropertiesLoader {
@@ -108,8 +109,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * Gets the auth code from the request and exchanges it for a token containing user info.
      * @param req servlet request
      * @param resp servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet exception
+     * @throws IOException io exception
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -154,8 +155,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * Sends the request for a token to Cognito and maps the response
      * @param authRequest the request to the oauth2/token url in cognito
      * @return response from the oauth2/token endpoint which should include id token, access token and refresh token
-     * @throws IOException
-     * @throws InterruptedException
+     * @throws IOException io exception
+     * @throws InterruptedException interrupted exception
      */
     private TokenResponse getToken(HttpRequest authRequest) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
@@ -178,9 +179,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     /**
      * Get values out of the header to verify the token is legit. If it is legit, get the claims from it, such
      * as username.
-     * @param tokenResponse
-     * @return
-     * @throws IOException
+     * @param tokenResponse the token response
+     * @return user
+     * @throws IOException io exception
      */
     private User validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();

@@ -1,5 +1,5 @@
 <%@include file="taglib.jsp"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 
 <c:import url="head.jsp" />
@@ -47,7 +47,7 @@
                             <li>Bathroom Access: ${review.bathroomAccess}</li>
                             <li>Kid Friendliness: ${review.kidFriendliness}</li>
                             <li>Dog Friendliness: ${review.dogFriendliness}</li>
-                        </ul></p>
+                        </ul>
                             <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${review.reviewText}</div>
                                 <form action="editReviewRouter" class ="form-inline">
                                     <input type="hidden" name="reviewID" value=${review.id} />
@@ -68,7 +68,7 @@
         </c:forEach>
 
      
-    </div>
+
 </section>
 </body>
 <c:import url="footer.jsp" />

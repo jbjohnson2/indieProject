@@ -1,4 +1,4 @@
-<header></header>
+<header>
 <section class="menu menu2 cid-u7iIcWX3D5" once="menu" id="menu-5-u7iIcWX3D5">
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">

@@ -55,8 +55,8 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
      * Route to the aws-hosted cognito login page.
      * @param req servlet request
      * @param resp servlet response
-     * @throws ServletException
-     * @throws IOException
+     * @throws ServletException servlet exception
+     * @throws IOException io exception
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

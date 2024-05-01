@@ -6,7 +6,7 @@
 
 ### Browse Reviews
 
-![Browse Revies](wireframes/browse.png)
+![Browse Reviews](wireframes/browse.png)
 
 ### Search Reviews
 
