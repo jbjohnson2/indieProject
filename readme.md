@@ -45,7 +45,9 @@ The goal of my project would be to provide a centralized place  where people can
 * Add campsite table
 * update Cognito log in so that zipcode is required to create an account
 * update Auth to get all user info from the login, not just the username and email
-
+* add time stamp to reviews to make getting recent reviews easier
+* add an option to add a photo to a review
+* 
 #### [User Stories](DesignDocuments/UserStories.md)
 #### [Screen Design](DesignDocuments/Screens.md)
 
