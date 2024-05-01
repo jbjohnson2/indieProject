@@ -121,12 +121,12 @@
 - [X] work on documentation to ensure it meets requirements
 - [X] Create video, add video link to readme.md
 - [ ] Final Presentation
-- [ ] Finalize all documentation
+- [X] Finalize all documentation
 - [X] Code quality check
 - [ ] Implement Feedback from Week 14 review
 - [X] Add video demonstration link to readme
-- [ ] Update time log
-- [ ] Final touches before code complete
+- [X] Update time log
+- [X] Final touches before code complete
 
 
 ### Week 16 - Project due 5/7 at 7PM, Final Learning Tracker due 5/8 at 7PM

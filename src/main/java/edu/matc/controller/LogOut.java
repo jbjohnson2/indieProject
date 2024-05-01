@@ -24,11 +24,12 @@ public class LogOut extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //set session attributes as null
         HttpSession session = req.getSession();
         session.setAttribute("userName", null);
         session.setAttribute("User", null);
         session.setAttribute("userName", null);
-        logger.debug(req.getParameter("userName"));
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
     }

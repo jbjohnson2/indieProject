@@ -11,9 +11,22 @@ import javax.ws.rs.core.MediaType;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * The type Test service client.
+ */
 public class TestServiceClient {
+    /**
+     * The Zipcode api dao.
+     */
     ZipcodeApiDao zipcodeApiDao = new ZipcodeApiDao();
     private final Logger logger = LogManager.getLogger(this.getClass());
+
+    /**
+     * Test zipcodeapi json.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testZipcodeapiJSON() throws Exception {
         Client client = ClientBuilder.newClient();
@@ -25,21 +38,18 @@ public class TestServiceClient {
         double expectedDistance = 24.756;
         assertEquals(expectedDistance, distanceResults.getDistance());
 
-//        assertEquals("???", response);
     }
-//
+
+    /**
+     * Test zipcodeapi passing variables.
+     *
+     * @throws Exception the exception
+     */
+
     @Test
     public void testZipcodeapiPassingVariables() throws Exception {
         double distance = zipcodeApiDao.getDistance(53718, 53038);
         assertEquals(24.756, distance);
     }
-////
-////    @Test
-////    public void testGettingParksWithinDistance() throws Exception {
-////        List parksWithinDistance = zipcodeApiDao.getParksWithinDistance(53718);
-////        logger.debug(parksWithinDistance);
-////        assertEquals("???", parksWithinDistance.size() );
-////    }
-
 
 }

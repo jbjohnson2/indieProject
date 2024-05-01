@@ -24,8 +24,9 @@ public class SearchReview extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
+
         GenericDao reviewDao = new GenericDao(Review.class);
+        //search by park,keyword or get all reviews based on search form
         if (req.getParameter("submit").equals("searchByPark")) {
             req.setAttribute("reviews", reviewDao.findByPropertyEqual("park", req.getParameter("parkName")));
         } else if(req.getParameter("submit").equals("searchByKeyword")) {

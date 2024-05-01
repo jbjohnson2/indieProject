@@ -17,6 +17,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * a servlet to update the user reviews list
+ */
 @WebServlet(
         urlPatterns = {"/userPage"}
 )
@@ -26,7 +29,7 @@ public class UserPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
+        //get user and reset userReviews so that they are current
         GenericDao userDao = new GenericDao(User.class);
         HttpSession session = req.getSession();
         User user = (User) userDao.getById((Integer) session.getAttribute("userId"));

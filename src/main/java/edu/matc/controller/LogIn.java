@@ -61,12 +61,14 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (properties.isEmpty()) {
+            req.setAttribute("errorMessage", "Error loading properties");
             req.setAttribute("errorMessage", "Error getting or validating the token: ");
             RequestDispatcher dispatcher = req.getRequestDispatcher("Error.jsp");
             dispatcher.forward(req, resp);
+        } else {
+            String url = LOGIN_URL + "?response_type=code&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URL;
+            resp.sendRedirect(url);
+            logger.debug(url);
         }
-        String url = LOGIN_URL + "?response_type=code&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URL;
-        resp.sendRedirect(url);
-        logger.debug(url);
     }
 }
