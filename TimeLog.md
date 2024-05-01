@@ -86,7 +86,7 @@
 | 04/29/24 | Add addzip to userpage, update search for distance, addZip to user                                                                | 3     |       |
 | 04/30/24 | update so content isn't under navbar, get rid of references to user and reviewdao, move zipsearch                                 | 1     |       |
 | 04/30/24 | navbar toggle for if user is logged in or not                                                                                     | 1     |       |
-|          |                                                                                                                                   |       |       |
+| 04/30/24 | meet with peer to go over projects/ complete peer review                                                                          | 2.5   |       |
 |          |                                                                                                                                   |       |       |
 |          |                                                                                                                                   |       |       |
 

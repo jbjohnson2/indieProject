@@ -107,17 +107,16 @@
 - [X] create a jsp for a page where users can view/edit/delete their reviews
 - [X] create a controller to perform the view/edit/delete of those reviews
 - [X] Create browse jsp and controller
-- [ ] update user page so that new user has to enter zipcode
+- [X] update user page so that new user has to enter zipcode
 - [X] Update time log
 
 ### Week 15 - 4/29 to 5/5 - Work week
 - [ ] generate new mock data with fewer nulls
 - [ ] add error page
-- [ ] Work on navbar when user is logged it
+- [X] Work on navbar when user is logged it
 - [X] work on styling so that content sits under navbar
 - [X] moved find distance to a separate page
-- [ ] see if more tests are needed
-- [ ] look over rubric to ensure project meets all requirements
+- [X] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
 - [ ] Final Presentation
