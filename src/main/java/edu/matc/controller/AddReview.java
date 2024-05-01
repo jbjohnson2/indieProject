@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 /**
-a servlet to get form paramaters to add a review to the database
+a servlet to get form parameters to add a review to the database
  */
 
 @WebServlet(

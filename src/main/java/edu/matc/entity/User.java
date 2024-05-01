@@ -45,7 +45,7 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param userName     the user name
+     * @param userName     the username
      * @param emailAddress the email address
      */
     public User(String userName, String emailAddress) {
@@ -58,7 +58,7 @@ public class User {
      *
      * @param firstName    the first name
      * @param lastName     the last name
-     * @param userName     the user name
+     * @param userName     the username
      * @param emailAddress the email address
      */
     public User(String firstName, String lastName, String userName, String emailAddress) {
@@ -73,7 +73,7 @@ public class User {
      *
      * @param firstName    the first name
      * @param lastName     the last name
-     * @param userName     the user name
+     * @param userName     the username
      * @param emailAddress the email address
      * @param zipcode      the zipcode
      */
@@ -140,18 +140,18 @@ public class User {
     }
 
     /**
-     * Gets user name.
+     * Gets username.
      *
-     * @return the user name
+     * @return the username
      */
     public String getUserName() {
         return userName;
     }
 
     /**
-     * Sets user name.
+     * Sets username.
      *
-     * @param userName the user name
+     * @param userName the username
      */
     public void setUserName(String userName) {
         this.userName = userName;

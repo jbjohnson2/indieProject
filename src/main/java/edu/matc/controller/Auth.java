@@ -45,23 +45,54 @@ import java.util.Properties;
 import java.util.stream.Collectors;
 
 
+/**
+ * The type Auth.
+ */
 @WebServlet(
         urlPatterns = {"/auth"}
 )
 // TODO if something goes wrong it this process, route to an error page. Currently, errors are only caught and logged.
 /**
+ *
  * Inspired by: https://stackoverflow.com/questions/52144721/how-to-get-access-token-using-client-credentials-using-java-code
  */
 
 public class Auth extends HttpServlet implements PropertiesLoader {
+    /**
+     * The Properties.
+     */
     Properties properties;
+    /**
+     * The Client id.
+     */
     String CLIENT_ID;
+    /**
+     * The Client secret.
+     */
     String CLIENT_SECRET;
+    /**
+     * The Oauth url.
+     */
     String OAUTH_URL;
+    /**
+     * The Login url.
+     */
     String LOGIN_URL;
+    /**
+     * The Redirect url.
+     */
     String REDIRECT_URL;
+    /**
+     * The Region.
+     */
     String REGION;
+    /**
+     * The Pool id.
+     */
     String POOL_ID;
+    /**
+     * The Jwks.
+     */
     Keys jwks;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -238,7 +269,6 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     /**
      * Gets the JSON Web Key Set (JWKS) for the user pool from cognito and loads it
      * into objects for easier use.
-     *
      * JSON Web Key Set (JWKS) location: https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
      * Demo url: https://cognito-idp.us-east-2.amazonaws.com/us-east-2_XaRYHsmKB/.well-known/jwks.json
      *

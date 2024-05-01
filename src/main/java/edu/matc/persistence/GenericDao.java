@@ -1,14 +1,9 @@
 package edu.matc.persistence;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import edu.matc.entity.Review;
-import jakarta.persistence.Entity;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
