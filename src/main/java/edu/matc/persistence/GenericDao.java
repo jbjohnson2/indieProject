@@ -65,19 +65,6 @@ public class GenericDao<T> {
     }
 
     /**
-     * Gets an entity by username
-     *
-     * @param id entity id to search by
-     * @return entity
-     */
-    public <T> T getById(String id) {
-        Session session = getSession();
-        T entity = (T) session.get(type, id);
-        session.close();
-        return entity;
-    }
-
-    /**
      * Deletes the entity.
      *
      * @param entity entity to be deleted
@@ -183,30 +170,6 @@ public class GenericDao<T> {
         return items;
     }
 
-
-
-
-    /**
-     * Finds entities by multiple properties.
-     * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
-     *
-     * @param propertyMap property and value pairs
-     * @return entities with properties equal to those passed in the map
-     */
-    public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
-        Session session = getSession();
-        HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        List<Predicate> predicates = new ArrayList<Predicate>();
-        for (Map.Entry entry : propertyMap.entrySet()) {
-            predicates.add(builder.equal(root.get((String) entry.getKey()), entry.getValue()));
-        }
-        query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
-        List<T> items = session.createSelectionQuery(query).getResultList();
-        session.close();
-        return items;
-    }
 
 
 

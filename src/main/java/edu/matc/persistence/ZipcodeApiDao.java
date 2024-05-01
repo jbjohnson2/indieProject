@@ -27,13 +27,6 @@ public class ZipcodeApiDao {
     GenericDao genericDao;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    private List getParks() {
-        List<StatePark> parks;
-        genericDao = new GenericDao(StatePark.class);
-        parks = genericDao.getAll();
-        return parks;
-    }
-
     /**
      * Gets distance.
      *
@@ -56,31 +49,6 @@ public class ZipcodeApiDao {
         }
         distance = (double) distanceResults.getDistance();
         return distance;
-    }
-
-    /**
-     * Gets parks within distance.
-     *
-     * @param userZip the user zip
-     * @return the parks within distance
-     */
-    public List getParksWithinDistance(int userZip) {
-        List<StatePark> allParks = getParks();
-        List<StatePark> parksWithinDistance = new ArrayList<>();
-        double requiredDistance = 50;
-        double distance;
-        logger.debug(allParks.size());
-
-        for(StatePark park: allParks) {
-            logger.debug(park);
-            distance = getDistance(userZip, park.getZipcode());
-            logger.debug(distance);
-            if (distance < requiredDistance) {
-                parksWithinDistance.add(park);
-                logger.debug(park);
-            }
-        }
-        return parksWithinDistance;
     }
 
 }
