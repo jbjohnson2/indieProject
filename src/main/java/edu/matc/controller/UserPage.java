@@ -29,10 +29,8 @@ public class UserPage extends HttpServlet {
 
         GenericDao userDao = new GenericDao(User.class);
         HttpSession session = req.getSession();
-        User user = (User) session.getAttribute("User");
-
+        User user = (User) userDao.getById((Integer) session.getAttribute("userId"));
         List<Review> userReviews = user.getReviews();
-
 
         req.setAttribute("userReviews", userReviews);
 

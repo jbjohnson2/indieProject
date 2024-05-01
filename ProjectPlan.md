@@ -90,13 +90,13 @@
 ### Week 12 - 4/8 to 4/14 - Team Presentations
 
 
-- [x] update time log
+- [x] Update time log
 
 ### Week 13 - 4/15 to 4/21 - Class topic is Asynchronous Messaging
 - [x] implement genericDAO
 - [X] make reviews searchable by keyword
 - [x] add plugin  or use project lambock so comments/code can be generated
-- [X] update time log
+- [X] Update time log
 
 ### Week 14 - 4/22 to 4/27 - Class topic is Individual Project Code Reviews
 
@@ -111,7 +111,7 @@
 - [X] Update time log
 
 ### Week 15 - 4/29 to 5/5 - Work week
-- [ ] generate new mock data with fewer nulls
+
 - [ ] add error page
 - [X] Work on navbar when user is logged it
 - [X] work on styling so that content sits under navbar
