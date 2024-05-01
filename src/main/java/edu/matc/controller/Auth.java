@@ -118,7 +118,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         GenericDao userDao = new GenericDao<>(User.class);
 
         if (authCode == null) {
-            //TODO forward to an error page or back to the login
+            req.setAttribute("errorMessage", "Authorization code is null");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
+            dispatcher.forward(req, resp);
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
@@ -133,10 +135,14 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 logger.debug("The user id is " + user.getId());
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                //TODO forward to an error page
+                req.setAttribute("errorMessage", "Error getting or validating the token.");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
+                dispatcher.forward(req, resp);
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                //TODO forward to an error page
+                req.setAttribute("errorMessage","Error getting token from Cognito oauth url." );
+                RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
+                dispatcher.forward(req, resp);
             }
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
@@ -232,9 +238,6 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         } else {
             user = (User) userDao.getById(userList.get(0).getId());
         }
-
-        // TODO decide what you want to do with the info!
-        // for now, I'm just returning username for display back to the browser
 
         return user;
     }
