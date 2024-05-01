@@ -112,7 +112,7 @@
 
 ### Week 15 - 4/29 to 5/5 - Work week
 
-- [ ] add error page
+- [X] add error page
 - [X] Work on navbar when user is logged it
 - [X] work on styling so that content sits under navbar
 - [X] moved find distance to a separate page
