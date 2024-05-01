@@ -119,12 +119,12 @@
 - [X] look over rubric to ensure project meets all requirements
 - [ ] clean up code
 - [ ] work on documentation to ensure it meets requirements
+- [X] Create video, add video link to readme.md
 - [ ] Final Presentation
-- [ ] Create video, add video link to readme.md
 - [ ] Finalize all documentation
 - [ ] Code quality check
 - [ ] Implement Feedback from Week 14 review
-- [ ] Add video demonstration link to readme
+- [X] Add video demonstration link to readme
 - [ ] Update time log
 - [ ] Final touches before code complete
 
