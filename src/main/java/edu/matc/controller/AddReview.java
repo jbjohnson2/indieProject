@@ -29,14 +29,15 @@ public class AddReview extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
         GenericDao reviewDao = new GenericDao(Review.class);
         GenericDao userDao = new GenericDao(User.class);
 
 
         Review review = new Review();
+        //get user
         int userID = Integer.parseInt(req.getParameter("userID"));
         User user = (User)userDao.getById(userID);
+        //set review info from form parameters
         review.setUser(user);
         review.setPark(req.getParameter("park"));
         review.setCampground(req.getParameter("campground"));
@@ -47,7 +48,9 @@ public class AddReview extends HttpServlet {
         review.setKidFriendliness(req.getParameter("kidFriendliness"));
         review.setDogFriendliness(req.getParameter("dogFriendliness"));
         review.setReviewText(req.getParameter("reviewText"));
+        //add review to database
         int addedReviewID = reviewDao.insert(review);
+        //set header and reviews so that they can be displayed in the results jsp
         req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", addedReviewID));
         req.setAttribute("tableHeader", "Review Added");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");

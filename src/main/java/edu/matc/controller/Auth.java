@@ -46,12 +46,11 @@ import java.util.stream.Collectors;
 
 
 /**
- * The type Auth.
+ * The type Auth servlet to authenticate user and add new user if needed
  */
 @WebServlet(
         urlPatterns = {"/auth"}
 )
-// TODO if something goes wrong it this process, route to an error page. Currently, errors are only caught and logged.
 /*
 
 
@@ -125,6 +124,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
+                //get user, userid and user reviews and set them into req or session
                 TokenResponse tokenResponse = getToken(authRequest);
                 user = validate(tokenResponse);
                 List<Review> userReviews = user.getReviews();
@@ -136,9 +136,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 logger.debug("The user id is " + user.getId());
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                req.setAttribute("errorMessage", "Error getting or validating the token.");
-                RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
-                dispatcher.forward(req, resp);
+//                req.setAttribute("errorMessage", "Error getting or validating the token.");
+//                RequestDispatcher dispatcher = req.getRequestDispatcher("error.jsp");
+//                dispatcher.forward(req, resp);
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
                 req.setAttribute("errorMessage","Error getting token from Cognito oauth url." );
@@ -226,8 +226,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         logger.debug("here's the username: " + userName );
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
-        GenericDao<User> userDao = new GenericDao<>(User.class);
 
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+        //check to see if user exists in the database, if not, add the user
         List<User> userList = userDao.findByPropertyEqual("userName", userName);
         User user = null;
         if (userList.isEmpty()) {

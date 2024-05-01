@@ -29,7 +29,7 @@
                         <li>Bathroom Access: ${recentReview1.bathroomAccess}</li>
                         <li>Kid Friendliness: ${recentReview1.kidFriendliness}</li>
                         <li>Dog Friendliness: ${recentReview1.dogFriendliness}</li>
-                    </ul>
+                    </ul></p>
                         <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${recentReview1.reviewText}</div>
                     </div>
                 </div>
@@ -50,11 +50,11 @@
                         <li>Bathroom Access: ${recentReview2.bathroomAccess}</li>
                         <li>Kid Friendliness: ${recentReview2.kidFriendliness}</li>
                         <li>Dog Friendliness: ${recentReview2.dogFriendliness}</li>
-                    </ul>
+                    </ul></p>
                         <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${recentReview2.reviewText}</div>
                     </div>
                 </div>
-
+            </div>
             <div class="item features-image col-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
@@ -71,7 +71,7 @@
                         <li>Bathroom Access: ${recentReview3.bathroomAccess}</li>
                         <li>Kid Friendliness: ${recentReview3.kidFriendliness}</li>
                         <li>Dog Friendliness: ${recentReview3.dogFriendliness}</li>
-                    </ul>
+                    </ul></p>
                         <div class="mbr-text mbr-fonts-style mb-3 display-7">Review: ${recentReview3.reviewText}</div>
                     </div>
                 </div>

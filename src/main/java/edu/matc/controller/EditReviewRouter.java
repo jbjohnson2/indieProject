@@ -23,9 +23,9 @@ public class EditReviewRouter extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
 
 
+        //gets review to edit and sends it to the jsp
         GenericDao reviewDao= new GenericDao(Review.class);
 
         Review reviewToEdit = (Review)reviewDao.getById(Integer.parseInt(req.getParameter("reviewID")));
@@ -36,7 +36,4 @@ public class EditReviewRouter extends HttpServlet {
         dispatcher.forward(req, resp);
     }
 
-
-    public static class AddZipcode {
-    }
 }

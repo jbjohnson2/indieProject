@@ -1,5 +1,5 @@
 <%@include file="taglib.jsp"%>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <c:import url="head.jsp" />
 <script type="text/javascript" class="init">

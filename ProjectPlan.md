@@ -117,12 +117,12 @@
 - [X] work on styling so that content sits under navbar
 - [X] moved find distance to a separate page
 - [X] look over rubric to ensure project meets all requirements
-- [ ] clean up code
-- [ ] work on documentation to ensure it meets requirements
+- [X] clean up code
+- [X] work on documentation to ensure it meets requirements
 - [X] Create video, add video link to readme.md
 - [ ] Final Presentation
 - [ ] Finalize all documentation
-- [ ] Code quality check
+- [X] Code quality check
 - [ ] Implement Feedback from Week 14 review
 - [X] Add video demonstration link to readme
 - [ ] Update time log

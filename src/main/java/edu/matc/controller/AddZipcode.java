@@ -28,14 +28,19 @@ public class AddZipcode extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
+
         GenericDao userDao = new GenericDao(User.class);
+        //get user
         int userId = Integer.parseInt(req.getParameter("userId"));
         User user = (User) userDao.getById(userId);
+        //set user zipcode
         user.setZipcode(Integer.parseInt(req.getParameter("userZip")));
+        //update user
         userDao.update(user);
+        //update user reviews and user
         req.setAttribute("userReviews", user.getReviews());
         req.setAttribute("User", user);
+        //forward to distance search to display results
         RequestDispatcher dispatcher = req.getRequestDispatcher("/distanceSearch.jsp");
         dispatcher.forward(req, resp);
     }

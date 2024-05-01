@@ -28,15 +28,15 @@ public class EditReview extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
+        //gets form data and uses it to edit a review
         GenericDao reviewDao = new GenericDao(Review.class);
         GenericDao userDao = new GenericDao(User.class);
-        logger.debug(req.getParameter("userId"));
-        logger.debug(req.getParameter("reviewId"));
+        //get id  of review to edit
         Review reviewToEdit = (Review)reviewDao.getById(Integer.parseInt(req.getParameter("reviewId")));
-        int reviewId = reviewToEdit.getId();
+        //get user
         int userId = Integer.parseInt(req.getParameter("userId"));
         User user = (User)userDao.getById(userId);
+        //set review info from form
         reviewToEdit.setUser(user);
         reviewToEdit.setPark(req.getParameter("park"));
         reviewToEdit.setCampground(req.getParameter("campground"));
@@ -47,8 +47,9 @@ public class EditReview extends HttpServlet {
         reviewToEdit.setKidFriendliness(req.getParameter("kidFriendliness"));
         reviewToEdit.setDogFriendliness(req.getParameter("dogFriendliness"));
         reviewToEdit.setReviewText(req.getParameter("reviewText"));
+        //update review
         reviewDao.update(reviewToEdit);
-
+        //set reviews and table header to be displayed on results page
         req.setAttribute("reviews", reviewDao.findByPropertyEqual("id", reviewToEdit.getId()));
         req.setAttribute("tableHeader", "Review Updated");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");

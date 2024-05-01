@@ -23,12 +23,12 @@ import java.util.List;
 public class BrowseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
-        GenericDao genericDao = new GenericDao(Review.class);
 
+        GenericDao genericDao = new GenericDao(Review.class);
+        //get all reviews
         List<Review> reviews = genericDao.getAll();
         int numberOfReviews = reviews.size();
-
+        //set attributes for recent reviews and all reviews to be displayed on the browse page
         req.setAttribute("recentReview1", genericDao.getById(numberOfReviews));
         req.setAttribute("recentReview2", genericDao.getById(numberOfReviews-1));
         req.setAttribute("recentReview3", genericDao.getById(numberOfReviews-2));

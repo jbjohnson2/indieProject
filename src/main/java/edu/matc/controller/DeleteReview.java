@@ -28,9 +28,7 @@ public class DeleteReview extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //gets form data and uses it to execute a search or get all reviews
-
-
+        //delete review and then update the userReviews to be displayed on the userpage
         GenericDao genericDao= new GenericDao(Review.class);
         GenericDao userDao = new GenericDao(User.class);
         Review reviewToDelete = (Review)genericDao.getById(Integer.parseInt(req.getParameter("reviewID")));
